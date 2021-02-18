@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/heartbeat_1.wav-f6a7dc4abcbef0c49acf2949913e5d2a.sample"
+
+[deps]
+
+source_file="res://lmms/heartbeat_1.wav"
+dest_files=[ "res://.import/heartbeat_1.wav-f6a7dc4abcbef0c49acf2949913e5d2a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

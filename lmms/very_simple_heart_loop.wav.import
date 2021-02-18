@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/very_simple_heart_loop.wav-649ae1fe1120d511bc11ec98652fe466.sample"
+
+[deps]
+
+source_file="res://lmms/very_simple_heart_loop.wav"
+dest_files=[ "res://.import/very_simple_heart_loop.wav-649ae1fe1120d511bc11ec98652fe466.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
