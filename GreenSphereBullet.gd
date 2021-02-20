@@ -17,8 +17,19 @@ func delete():
 	is_deleting = true
 	queue_free()
 
-func hit_something():
-	delete()
+var things_ive_hit = []
+var piercing = 1
+
+func hit_something(what):
+	if what in things_ive_hit:
+		return false
+		
+	things_ive_hit.append(what)
+	piercing -= 1
+	if piercing <= 0:
+		delete()
+	
+	return true
 	
 onready var player = get_node("../Player")
 	

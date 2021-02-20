@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://graphics/basic_arrow.svg" type="Texture" id=1]
 [ext_resource path="res://BasicArrow.gd" type="Script" id=2]
 [ext_resource path="res://graphics/heart_particle.svg" type="Texture" id=3]
 [ext_resource path="res://graphics/heart_cicle.svg" type="Texture" id=4]
+[ext_resource path="res://tmp/SpawnParticles.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -317,7 +318,7 @@ radius = 15.2378
 [node name="BasicArrow" type="KinematicBody2D"]
 position = Vector2( 1, 0 )
 collision_layer = 2
-collision_mask = 2
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="Spawn" type="Sprite" parent="."]
@@ -367,28 +368,7 @@ local_coords = false
 process_material = SubResource( 11 )
 texture = ExtResource( 3 )
 
-[node name="SpawnParticles" type="CPUParticles2D" parent="."]
-visible = false
-emitting = false
-amount = 10
-lifetime = 2.0
-one_shot = true
-explosiveness = 0.95
-randomness = 1.0
-lifetime_randomness = 0.5
-local_coords = false
-texture = ExtResource( 3 )
-emission_shape = 2
-emission_rect_extents = Vector2( 12, 12 )
-direction = Vector2( 0, 1 )
-spread = 20.0
-gravity = Vector2( 0, 200 )
-initial_velocity = 350.0
-scale_amount = 0.5
-scale_amount_curve = SubResource( 3 )
-color_ramp = SubResource( 4 )
-hue_variation = 0.13
-hue_variation_random = 0.55
+[node name="SpawnParticles" parent="." instance=ExtResource( 5 )]
 
 [node name="BasicArrow" type="Sprite" parent="."]
 texture = ExtResource( 1 )

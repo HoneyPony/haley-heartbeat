@@ -1,12 +1,18 @@
 extends Sprite
 
-const FIRST_GRACE_TIME = 0.1
-const SECOND_GRACE_TIME = 0.2
+const FIRST_GRACE_TIME = 0.15
+const SECOND_GRACE_TIME = 0.15
 
 var time_since_hearbeat = FIRST_GRACE_TIME
 var pretend_time_since_heartbeat = 0
 
+onready var spikes = get_node("../Spikes")
+onready var spikes2 = get_node("../Spikes2")
+
+var beat_consumed = false
+
 func beat():
+	beat_consumed = false
 	time_since_hearbeat = 0
 	pass
 	
@@ -26,6 +32,8 @@ func play_sfx_queue():
 		
 	sfx_queue.clear()
 	
+var desired_playback_time = 0
+	
 func _process(delta):
 	# This is a, in my opinion, clever trick.
 	# It's very easy to check if the player input occurs in a time period after
@@ -41,14 +49,26 @@ func _process(delta):
 	scale.x = 1.0 + t * 0.5
 	scale.y = scale.x
 	
+	spikes.scale.y = t * 2.0
+	spikes2.scale.y = t * 2.0
+	
+	var beat_sync = time_since_hearbeat < FIRST_GRACE_TIME
+	
 	time_since_hearbeat += delta
-	if time_since_hearbeat > FIRST_GRACE_TIME:
+	desired_playback_time += delta
+	if time_since_hearbeat >= FIRST_GRACE_TIME:
 		if not $Audio.playing:
+			desired_playback_time = 0
 			$Audio.playing = true
+		if beat_sync:
+			pass
 		play_sfx_queue()
 		pretend_time_since_heartbeat = time_since_hearbeat - FIRST_GRACE_TIME
 	else:
 		pretend_time_since_heartbeat += delta
 	
 func is_on_beat():
+	if beat_consumed:
+		return false
+	beat_consumed = true
 	return time_since_hearbeat <= FIRST_GRACE_TIME + SECOND_GRACE_TIME

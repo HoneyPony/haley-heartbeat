@@ -302,7 +302,7 @@ shader_param/color_ramp = SubResource( 7 )
 shader_param/scale_texture = SubResource( 4 )
 
 [node name="GreenSphereBullet" type="KinematicBody2D"]
-collision_layer = 0
+collision_layer = 4
 collision_mask = 0
 script = ExtResource( 1 )
 
@@ -312,7 +312,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 1e-05, 1e-05 )
 frames = SubResource( 2 )
-frame = 8
+frame = 22
 playing = true
 
 [node name="Particles2D" type="Particles2D" parent="."]

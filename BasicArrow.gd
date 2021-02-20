@@ -18,6 +18,8 @@ func delete():
 	
 var things_ive_hit = []
 
+var ArrowImpact = preload("res://ArrowImpact.tscn")
+
 func hit_something(what):
 	if what in things_ive_hit:
 		return false
@@ -26,6 +28,10 @@ func hit_something(what):
 	piercing -= 1
 	if piercing <= 0:
 		delete()
+		
+	var imp = ArrowImpact.instance()
+	imp.position = global_position
+	get_parent().add_child(imp)
 	
 	return true
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=95 format=2]
 
 [ext_resource path="res://graphics/try_to_salvage_player.svg" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -42,29 +42,55 @@
 [ext_resource path="res://graphics/render_player/walk_shoot.png0026.png" type="Texture" id=40]
 [ext_resource path="res://graphics/render_player/walk_shoot.png0024.png" type="Texture" id=41]
 [ext_resource path="res://graphics/render_player/walk_shoot.png0029.png" type="Texture" id=42]
-[ext_resource path="res://graphics/render_player/jump.png0003.png" type="Texture" id=43]
-[ext_resource path="res://graphics/render_player/jump.png0008.png" type="Texture" id=44]
-[ext_resource path="res://graphics/render_player/jump.png0007.png" type="Texture" id=45]
-[ext_resource path="res://graphics/render_player/jump.png0014.png" type="Texture" id=46]
-[ext_resource path="res://graphics/render_player/jump.png0001.png" type="Texture" id=47]
-[ext_resource path="res://graphics/render_player/jump.png0010.png" type="Texture" id=48]
-[ext_resource path="res://graphics/render_player/jump.png0000.png" type="Texture" id=49]
-[ext_resource path="res://graphics/render_player/jump.png0005.png" type="Texture" id=50]
-[ext_resource path="res://graphics/render_player/jump.png0002.png" type="Texture" id=51]
-[ext_resource path="res://graphics/render_player/jump.png0004.png" type="Texture" id=52]
-[ext_resource path="res://graphics/render_player/jump.png0009.png" type="Texture" id=53]
-[ext_resource path="res://graphics/render_player/jump.png0012.png" type="Texture" id=54]
-[ext_resource path="res://graphics/render_player/jump.png0015.png" type="Texture" id=55]
-[ext_resource path="res://graphics/render_player/jump.png0011.png" type="Texture" id=56]
-[ext_resource path="res://graphics/render_player/jump.png0013.png" type="Texture" id=57]
-[ext_resource path="res://graphics/render_player/jump.png0006.png" type="Texture" id=58]
+[ext_resource path="res://graphics/render_player/jump2.png0014.png" type="Texture" id=43]
+[ext_resource path="res://graphics/render_player/jump2.png0015.png" type="Texture" id=44]
+[ext_resource path="res://graphics/render_player/jump2.png0004.png" type="Texture" id=45]
+[ext_resource path="res://graphics/render_player/jump2.png0005.png" type="Texture" id=46]
+[ext_resource path="res://graphics/render_player/fall.png0019.png" type="Texture" id=47]
+[ext_resource path="res://graphics/render_player/fall.png0021.png" type="Texture" id=48]
+[ext_resource path="res://graphics/render_player/fall.png0024.png" type="Texture" id=49]
+[ext_resource path="res://graphics/render_player/jump2.png0003.png" type="Texture" id=50]
+[ext_resource path="res://graphics/render_player/jump2.png0006.png" type="Texture" id=51]
+[ext_resource path="res://graphics/render_player/jump2.png0011.png" type="Texture" id=52]
+[ext_resource path="res://graphics/render_player/jump2.png0012.png" type="Texture" id=53]
+[ext_resource path="res://graphics/render_player/jump2.png0013.png" type="Texture" id=54]
+[ext_resource path="res://graphics/render_player/jump2.png0007.png" type="Texture" id=55]
+[ext_resource path="res://graphics/render_player/jump2.png0008.png" type="Texture" id=56]
+[ext_resource path="res://graphics/render_player/jump2.png0009.png" type="Texture" id=57]
+[ext_resource path="res://graphics/render_player/jump2.png0010.png" type="Texture" id=58]
 [ext_resource path="res://lmms/heartbeat_4l.wav" type="AudioStream" id=59]
 [ext_resource path="res://lmms/heartbeat_1.wav" type="AudioStream" id=60]
 [ext_resource path="res://lmms/heartbeat_2.wav" type="AudioStream" id=61]
 [ext_resource path="res://lmms/heartbeat_3.wav" type="AudioStream" id=62]
+[ext_resource path="res://graphics/render_player/jump2.png0019.png" type="Texture" id=63]
+[ext_resource path="res://graphics/render_player/jump2.png0020.png" type="Texture" id=64]
+[ext_resource path="res://graphics/render_player/jump2.png0016.png" type="Texture" id=65]
+[ext_resource path="res://graphics/render_player/jump2.png0018.png" type="Texture" id=66]
+[ext_resource path="res://graphics/render_player/jump2.png0017.png" type="Texture" id=67]
+[ext_resource path="res://graphics/shadow_circle.svg" type="Texture" id=68]
+[ext_resource path="res://graphics/render_player/fall.png0025.png" type="Texture" id=69]
+[ext_resource path="res://graphics/render_player/fall.png0026.png" type="Texture" id=70]
+[ext_resource path="res://graphics/render_player/fall.png0023.png" type="Texture" id=71]
+[ext_resource path="res://graphics/render_player/fall.png0022.png" type="Texture" id=72]
+[ext_resource path="res://graphics/render_player/fall.png0016.png" type="Texture" id=73]
+[ext_resource path="res://graphics/render_player/fall.png0028.png" type="Texture" id=74]
+[ext_resource path="res://graphics/render_player/fall.png0030.png" type="Texture" id=75]
+[ext_resource path="res://graphics/render_player/fall.png0020.png" type="Texture" id=76]
+[ext_resource path="res://graphics/render_player/fall.png0015.png" type="Texture" id=77]
+[ext_resource path="res://graphics/render_player/fall.png0018.png" type="Texture" id=78]
+[ext_resource path="res://graphics/render_player/fall.png0027.png" type="Texture" id=79]
+[ext_resource path="res://graphics/render_player/fall.png0017.png" type="Texture" id=80]
+[ext_resource path="res://graphics/render_player/fall.png0029.png" type="Texture" id=81]
+[ext_resource path="res://graphics/render_player/fall.png0012.png" type="Texture" id=82]
+[ext_resource path="res://graphics/render_player/fall.png0011.png" type="Texture" id=83]
+[ext_resource path="res://graphics/render_player/fall.png0010.png" type="Texture" id=84]
+[ext_resource path="res://graphics/render_player/fall.png0014.png" type="Texture" id=85]
+[ext_resource path="res://graphics/render_player/fall.png0013.png" type="Texture" id=86]
 
-[sub_resource type="Animation" id=1]
-resource_name = "Walk"
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 3
+
+[sub_resource type="Animation" id=2]
 length = 0.45
 loop = true
 step = 0.05
@@ -81,7 +107,7 @@ tracks/0/keys = {
 "values": [ 10, 1, 2, 3, 4, 5, 6, 7, 8 ]
 }
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 4 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 20 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 19 ) ],
 "loop": true,
@@ -89,7 +115,15 @@ animations = [ {
 "speed": 24.0
 } ]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 84 ), ExtResource( 83 ), ExtResource( 82 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 77 ), ExtResource( 73 ), ExtResource( 80 ), ExtResource( 78 ), ExtResource( 47 ), ExtResource( 76 ), ExtResource( 48 ), ExtResource( 72 ), ExtResource( 71 ), ExtResource( 49 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 79 ), ExtResource( 74 ), ExtResource( 81 ), ExtResource( 75 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 23 ), ExtResource( 30 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 31 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 33 ), ExtResource( 35 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 36 ), ExtResource( 41 ), ExtResource( 38 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 39 ), ExtResource( 42 ) ],
 "loop": true,
@@ -97,16 +131,15 @@ animations = [ {
 "speed": 24.0
 } ]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 49 ), ExtResource( 47 ), ExtResource( 51 ), ExtResource( 43 ), ExtResource( 52 ), ExtResource( 50 ), ExtResource( 58 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 53 ), ExtResource( 48 ), ExtResource( 56 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 46 ), ExtResource( 55 ) ],
+"frames": [ ExtResource( 50 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 51 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 65 ), ExtResource( 67 ), ExtResource( 66 ), ExtResource( 63 ), ExtResource( 64 ) ],
 "loop": false,
 "name": "default",
 "speed": 24.0
 } ]
 
-[sub_resource type="Animation" id=5]
-resource_name = "Shoeprints"
+[sub_resource type="Animation" id=6]
 length = 0.8
 loop = true
 step = 0.042
@@ -128,8 +161,18 @@ tracks/0/keys = {
 } ]
 }
 
+[sub_resource type="CircleShape2D" id=7]
+radius = 12.8682
+
 [node name="Player" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 1 )
+position = Vector2( -0.743263, 53.8116 )
+scale = Vector2( 0.526175, 0.526175 )
+z_index = -5
+texture = ExtResource( 68 )
 
 [node name="icon" type="Sprite" parent="."]
 visible = false
@@ -140,19 +183,25 @@ frame = 10
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="icon"]
 autoplay = "Walk"
-anims/Walk = SubResource( 1 )
+anims/Walk = SubResource( 2 )
 
 [node name="Walk" type="AnimatedSprite" parent="."]
+visible = false
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 2 )
-frame = 3
+frames = SubResource( 3 )
+frame = 10
 playing = true
+
+[node name="Fall" type="AnimatedSprite" parent="."]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 8 )
 
 [node name="WalkShoot" type="AnimatedSprite" parent="."]
 visible = false
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 3 )
-frame = 5
+frames = SubResource( 4 )
+frame = 12
 playing = true
 
 [node name="ShootSpawn" type="Position2D" parent="."]
@@ -160,9 +209,8 @@ position = Vector2( -0.386993, 21.0989 )
 
 [node name="Jump" type="AnimatedSprite" parent="."]
 visible = false
-frames = SubResource( 4 )
-frame = 15
-playing = true
+frames = SubResource( 5 )
+frame = 17
 
 [node name="ShoeLeft" type="Position2D" parent="."]
 position = Vector2( -7.52036, 48.2295 )
@@ -172,7 +220,7 @@ position = Vector2( 6.79855, 48.2295 )
 
 [node name="ShoePrints" type="AnimationPlayer" parent="."]
 autoplay = "Shoeprints"
-anims/Shoeprints = SubResource( 5 )
+anims/Shoeprints = SubResource( 6 )
 
 [node name="Heart1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 60 )
@@ -189,3 +237,13 @@ bus = "HeartHit"
 [node name="Heart4" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 59 )
 bus = "HeartHit"
+
+[node name="Harm" type="Area2D" parent="."]
+collision_layer = 12
+collision_mask = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Harm"]
+position = Vector2( -0.386993, 41.5244 )
+shape = SubResource( 7 )
+[connection signal="area_entered" from="Harm" to="." method="_on_pit"]
+[connection signal="body_entered" from="Harm" to="." method="_on_hit"]
