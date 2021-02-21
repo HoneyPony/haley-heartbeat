@@ -1,4 +1,4 @@
-[gd_scene load_steps=171 format=2]
+[gd_scene load_steps=170 format=2]
 
 [ext_resource path="res://graphics/cauldron/walk_hit.png0074.png" type="Texture" id=1]
 [ext_resource path="res://graphics/cauldron/walk_hit.png0073.png" type="Texture" id=2]
@@ -205,23 +205,6 @@ blend_mode = 3
 radius = 48.7658
 height = 8.72278
 
-[sub_resource type="Animation" id=6]
-length = 1.875
-loop = true
-step = 0.042
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.63, 1.05, 1.512, 1.89 ),
-"transitions": PoolRealArray( 1, 0.5, 1, 2, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -112 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
-}
-
 [node name="Cauldron" type="Node2D"]
 script = ExtResource( 68 )
 
@@ -250,7 +233,7 @@ anims/Flash = SubResource( 3 )
 material = SubResource( 4 )
 position = Vector2( 1.30547, -11.2995 )
 scale = Vector2( 0.385751, 0.385751 )
-z_index = -1
+z_index = -4
 texture = ExtResource( 162 )
 
 [node name="Hitbox" type="Area2D" parent="."]
@@ -260,10 +243,6 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2( 0, -56.3194 )
 shape = SubResource( 5 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Hitbox"]
-autoplay = "MatchJump"
-anims/MatchJump = SubResource( 6 )
 
 [node name="Bubble" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 163 )

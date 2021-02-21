@@ -166,7 +166,28 @@ func process_fall(delta):
 onready var default_col = $Harm.collision_layer
 onready var default_mask = $Harm.collision_mask
 	
+var lose_time = -1
+
+onready var LoseScreen = load("res://LoseScreen.tscn")
+onready var audio_bus = AudioServer.get_bus_index("GameMusic")
+
 func _physics_process(delta):
+	if lose_time > 0:
+		$Walk.hide()
+		$Fall.hide()
+		$WalkShoot.hide()
+		$Jump.hide()
+		$Flop.show()
+		
+		lose_time -= delta
+		var db = AudioServer.get_bus_volume_db(audio_bus) - 10 * delta
+		db = clamp(db, -80, 0)
+		AudioServer.set_bus_volume_db(audio_bus, db)
+		if lose_time <= 0:
+			get_node("../../Transition").transition_to(LoseScreen, get_parent().get_parent())
+			lose_time = 100
+		return
+	
 	if jump_timer > 0 or health_invincible:
 		$Harm.collision_layer = 0
 		$Harm.collision_mask = 0
@@ -237,8 +258,22 @@ func take_health(amount):
 		return
 	
 	health -= amount
+	if health < 0:
+		$Walk.hide()
+		$Fall.hide()
+		$WalkShoot.hide()
+		$Jump.hide()
+		$Flop.show()
+		$Flop.play()
+		$OwBig.play()
+		lose_time = 1
+		
+		set_health_prop(0)
+		return
+	
 	health_invincible = true
 	$AnimationPlayer.play("Invincible")
+	
 
 func _on_hit(body):
 	if health_invincible:

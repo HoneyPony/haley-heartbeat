@@ -1,0 +1,76 @@
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://CrystalBullet.gd" type="Script" id=1]
+[ext_resource path="res://graphics/bullets/crystal.png0001.png" type="Texture" id=2]
+[ext_resource path="res://graphics/bullets/crystal.png0002.png" type="Texture" id=3]
+[ext_resource path="res://graphics/bullets/crystal.png0000.png" type="Texture" id=5]
+[ext_resource path="res://graphics/bullets/crystal.png0045.png" type="Texture" id=6]
+[ext_resource path="res://graphics/bullets/crystal.png0016.png" type="Texture" id=7]
+[ext_resource path="res://graphics/bullets/crystal.png0042.png" type="Texture" id=8]
+[ext_resource path="res://graphics/bullets/crystal.png0029.png" type="Texture" id=9]
+[ext_resource path="res://graphics/bullets/crystal.png0017.png" type="Texture" id=10]
+[ext_resource path="res://graphics/bullets/crystal.png0019.png" type="Texture" id=12]
+[ext_resource path="res://graphics/bullets/crystal.png0028.png" type="Texture" id=13]
+[ext_resource path="res://graphics/bullets/crystal.png0043.png" type="Texture" id=14]
+[ext_resource path="res://graphics/bullets/crystal.png0005.png" type="Texture" id=15]
+[ext_resource path="res://graphics/bullets/crystal.png0025.png" type="Texture" id=16]
+[ext_resource path="res://graphics/bullets/crystal.png0010.png" type="Texture" id=17]
+[ext_resource path="res://graphics/bullets/crystal.png0015.png" type="Texture" id=18]
+[ext_resource path="res://graphics/bullets/crystal.png0014.png" type="Texture" id=19]
+[ext_resource path="res://graphics/bullets/crystal.png0004.png" type="Texture" id=20]
+[ext_resource path="res://graphics/bullets/crystal.png0018.png" type="Texture" id=21]
+[ext_resource path="res://graphics/bullets/crystal.png0021.png" type="Texture" id=22]
+[ext_resource path="res://graphics/bullets/crystal.png0037.png" type="Texture" id=23]
+[ext_resource path="res://graphics/bullets/crystal.png0038.png" type="Texture" id=24]
+[ext_resource path="res://graphics/bullets/crystal.png0040.png" type="Texture" id=25]
+[ext_resource path="res://graphics/bullets/crystal.png0046.png" type="Texture" id=26]
+[ext_resource path="res://graphics/bullets/crystal.png0022.png" type="Texture" id=27]
+[ext_resource path="res://graphics/bullets/crystal.png0027.png" type="Texture" id=28]
+[ext_resource path="res://graphics/bullets/crystal.png0026.png" type="Texture" id=29]
+[ext_resource path="res://graphics/bullets/crystal.png0034.png" type="Texture" id=30]
+[ext_resource path="res://graphics/bullets/crystal.png0035.png" type="Texture" id=31]
+[ext_resource path="res://graphics/bullets/crystal.png0006.png" type="Texture" id=32]
+[ext_resource path="res://graphics/bullets/crystal.png0008.png" type="Texture" id=33]
+[ext_resource path="res://graphics/bullets/crystal.png0031.png" type="Texture" id=34]
+[ext_resource path="res://graphics/bullets/crystal.png0020.png" type="Texture" id=35]
+[ext_resource path="res://graphics/bullets/crystal.png0012.png" type="Texture" id=36]
+[ext_resource path="res://graphics/bullets/crystal.png0039.png" type="Texture" id=37]
+[ext_resource path="res://graphics/bullets/crystal.png0041.png" type="Texture" id=38]
+[ext_resource path="res://graphics/bullets/crystal.png0009.png" type="Texture" id=39]
+[ext_resource path="res://graphics/bullets/crystal.png0024.png" type="Texture" id=40]
+[ext_resource path="res://graphics/bullets/crystal.png0003.png" type="Texture" id=41]
+[ext_resource path="res://graphics/bullets/crystal.png0032.png" type="Texture" id=42]
+[ext_resource path="res://graphics/bullets/crystal.png0007.png" type="Texture" id=43]
+[ext_resource path="res://graphics/bullets/crystal.png0033.png" type="Texture" id=44]
+[ext_resource path="res://graphics/bullets/crystal.png0047.png" type="Texture" id=45]
+[ext_resource path="res://graphics/bullets/crystal.png0011.png" type="Texture" id=46]
+[ext_resource path="res://graphics/bullets/crystal.png0030.png" type="Texture" id=47]
+[ext_resource path="res://graphics/bullets/crystal.png0036.png" type="Texture" id=48]
+[ext_resource path="res://graphics/bullets/crystal.png0023.png" type="Texture" id=49]
+[ext_resource path="res://graphics/bullets/crystal.png0013.png" type="Texture" id=50]
+[ext_resource path="res://graphics/bullets/crystal.png0044.png" type="Texture" id=51]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 12.1775
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 41 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 32 ), ExtResource( 43 ), ExtResource( 33 ), ExtResource( 39 ), ExtResource( 17 ), ExtResource( 46 ), ExtResource( 36 ), ExtResource( 50 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 21 ), ExtResource( 12 ), ExtResource( 35 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 49 ), ExtResource( 40 ), ExtResource( 16 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 47 ), ExtResource( 34 ), ExtResource( 42 ), ExtResource( 44 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 48 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 37 ), ExtResource( 25 ), ExtResource( 38 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 51 ), ExtResource( 6 ), ExtResource( 26 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "default",
+"speed": 24.0
+} ]
+
+[node name="CrystalBullet" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 2
+shape = SubResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 10 )
+frame = 25
+playing = true

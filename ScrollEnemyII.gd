@@ -68,6 +68,7 @@ func _process(delta):
 		anim_stage = 2
 		
 	if bullet_timer <= 0:
+		$Shoot.play()
 		bullet_timer = rand_range(0.7, 1.0)
 		for i in range(0, rand_range(1, 3)):
 			var bullet = OrbBullet.instance()
@@ -92,3 +93,5 @@ func _on_hit(body):
 		if health <= 0:
 			Global.enemy_count -= 1
 			queue_free()
+			
+		$HitS.play()

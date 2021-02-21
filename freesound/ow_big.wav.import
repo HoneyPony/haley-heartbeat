@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ow_big.wav-d44a5f054de08a347415e1c0254ffe55.sample"
+
+[deps]
+
+source_file="res://freesound/ow_big.wav"
+dest_files=[ "res://.import/ow_big.wav-d44a5f054de08a347415e1c0254ffe55.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

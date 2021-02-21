@@ -10,7 +10,7 @@ var target_x = 0
 
 var target_x_vel
 
-var health: float = 14
+var health: float = 8
 
 func _ready():
 	$Anim.playing = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://BookEnemy.gd" type="Script" id=1]
 [ext_resource path="res://graphics/book/book.png0001.png" type="Texture" id=2]
@@ -63,24 +63,6 @@ blend_mode = 3
 radius = 45.5732
 height = 8.72278
 
-[sub_resource type="Animation" id=5]
-resource_name = "MatchJump"
-length = 1.875
-loop = true
-step = 0.042
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.63, 1.05, 1.512, 1.89 ),
-"transitions": PoolRealArray( 1, 0.5, 1, 2, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -112 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
-}
-
 [node name="Book" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -109,8 +91,4 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2( 1.19055, -58.3036 )
 shape = SubResource( 4 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Hitbox"]
-autoplay = "MatchJump"
-anims/MatchJump = SubResource( 5 )
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hit"]

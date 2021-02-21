@@ -39,7 +39,6 @@ func _physics_process(delta):
 	
 	lifetime -= delta
 	if lifetime <= 1:
-		$Particles2D.hide()
 		$CollisionShape2D.disabled = true
 	
 	if lifetime <= 0:

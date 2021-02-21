@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://graphics/heart_indicator.svg" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://graphics/button_right.svg" type="Texture" id=20]
 [ext_resource path="res://graphics/button_dow.svg" type="Texture" id=21]
 [ext_resource path="res://Tutorial.gd" type="Script" id=22]
+[ext_resource path="res://ScreenTransition.tscn" type="PackedScene" id=23]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Beat"
@@ -158,6 +159,7 @@ anims/Beat = SubResource( 1 )
 
 [node name="Audio" type="AudioStreamPlayer" parent="Layer/Heartbeat"]
 stream = ExtResource( 5 )
+bus = "GameMusic"
 
 [node name="Shock" type="Sprite" parent="Layer/Heartbeat"]
 scale = Vector2( 1.5, 1.5 )
@@ -424,3 +426,5 @@ position = Vector2( 384, 312.108 )
 
 [node name="Spawner" type="Node" parent="."]
 script = ExtResource( 18 )
+
+[node name="Transition" parent="." instance=ExtResource( 23 )]
