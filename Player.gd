@@ -6,12 +6,14 @@ var top_y = 0
 
 var tutorial_invincible = false
 
+export var health_invincible = false
+
 const ACCEL = 2400
 const MAXVEL = 400
 
 const HEALTHBAR_MAX = 175
 
-const HEALTH_MAX = 20
+const HEALTH_MAX = 7
 var health = HEALTH_MAX
 
 onready var healthbar = get_node("../../Layer/HealthbarHealth")
@@ -71,7 +73,7 @@ func beats2damage():
 	if heartbeats == 4:
 		return 2
 
-func try_shoot(reset_heartbeats = false):
+func try_shoot(reset_heartbeats = false, on_beat = false):
 	if jump_timer > 0:
 		return
 	
@@ -82,6 +84,7 @@ func try_shoot(reset_heartbeats = false):
 		shoot_timer = 0.27
 		
 		var arrow = beats2arrow().instance()
+		arrow.beat = on_beat
 		arrow.damage = beats2damage()
 		arrow.position = $ShootSpawn.global_position
 		get_parent().add_child(arrow)
@@ -115,10 +118,11 @@ func shoot_process(delta):
 				heartbeats = 1
 				
 			play_heart()
+			try_shoot(false, true)
 		else:
 			heartbeats = 0
-		try_shoot()
-	elif Input.is_action_pressed("player_fire"):
+		
+	if Input.is_action_pressed("player_fire"):
 		if try_shoot(true):
 			anim_shoot = true
 	else:
@@ -163,7 +167,7 @@ onready var default_col = $Harm.collision_layer
 onready var default_mask = $Harm.collision_mask
 	
 func _physics_process(delta):
-	if jump_timer > 0:
+	if jump_timer > 0 or health_invincible:
 		$Harm.collision_layer = 0
 		$Harm.collision_mask = 0
 	else:
@@ -233,21 +237,27 @@ func take_health(amount):
 		return
 	
 	health -= amount
+	health_invincible = true
+	$AnimationPlayer.play("Invincible")
 
 func _on_hit(body):
+	if health_invincible:
+		return
 	if jump_timer > 0:
 		return
 	
 	if body.hit_something(self):
-		
+		$Ow.play()
 		take_health(1)
 		
 func _on_pit(area):
+	if health_invincible:
+		return
 	if jump_timer > 0:
 		return
 		
 	area.get_parent().hit()
-	take_health(3)
+	take_health(2)
 	
 	respawn_point = Vector2(position.x, area.get_parent().y())
 	state = State.Fall

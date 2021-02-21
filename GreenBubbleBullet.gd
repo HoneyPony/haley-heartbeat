@@ -36,7 +36,7 @@ onready var player = get_node("../Player")
 func _ready():
 	target_offset = polar2cartesian(rand_range(0, 72), rand_range(0, TAU))
 	
-	velocity = Vector2(0, -400)
+	velocity = Vector2(0, -100)
 	
 	
 
@@ -54,6 +54,9 @@ func _physics_process(delta):
 		
 	if lifetime <= 0.3:
 		s = lifetime / 0.3
+		
+	velocity.y = velocity.y - 600 * delta
+	velocity.y = clamp(velocity.y, -400, 0)
 		
 	$Sprite.scale.x = s
 	$Sprite.scale.y = s

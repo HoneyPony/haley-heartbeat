@@ -9,6 +9,9 @@ func scroll2(time, position):
 func cauldron(time, position):
 	return [2, time, position]
 	
+func book(time, position):
+	return [3, time, position]
+	
 var wave = null
 var waveset = null
 var wave_index = -1
@@ -19,6 +22,7 @@ onready var ysort = get_node("../YSort")
 var ScrollI = preload("res://ScrollEnemy.tscn")
 var ScrollII = preload("res://ScrollEnemyII.tscn")
 var Cauldron = preload("res://CauldronEnemy.tscn")
+var Book = preload("res://BookEnemy.tscn")
 
 func spawn_scroll1(position):
 	var s = ScrollI.instance()
@@ -41,6 +45,13 @@ func spawn_cauldron(position):
 	s.spawn_y = position.y
 	ysort.add_child(s)
 	
+func spawn_book(position):
+	var s = Book.instance()
+	s.position.x = position.x
+	s.position.y = 1060
+	s.spawn_y = position.y
+	ysort.add_child(s)
+	
 func spawn(what):
 	if what[0] == 0:
 		spawn_scroll1(what[2])
@@ -48,12 +59,16 @@ func spawn(what):
 		spawn_scroll2(what[2])
 	if what[0] == 2:
 		spawn_cauldron(what[2])
+	if what[0] == 3:
+		spawn_book(what[2])
 		
 func _ready():
 	if Global.level == 1:
 		waveset = level1
 	if Global.level == 2:
 		waveset = level2
+	if Global.level == 3:
+		waveset = level3
 		
 	next_wave()
 		
@@ -116,4 +131,8 @@ var level2 = [
 	[cauldron(1, Vector2(294, 750)), cauldron(1.2, Vector2(384, 750)), cauldron(1.4, Vector2(474, 750))],
 	[cauldron(1, Vector2(200, 750)), scroll1(1.2, Vector2(500, 740)), scroll1(1.3, Vector2(580, 740)),scroll1(4.5, Vector2(500, 800)), scroll2(5, Vector2(580, 800))
 	]
+]
+
+var level3 = [
+	[book(2, Vector2(384, 700)), book(2, Vector2(192, 750)), book(2, Vector2(576, 750))]
 ]

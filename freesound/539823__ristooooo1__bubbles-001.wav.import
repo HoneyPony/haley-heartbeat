@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/539823__ristooooo1__bubbles-001.wav-6acfe5ae16b4c7b6c4681843214e7233.sample"
+
+[deps]
+
+source_file="res://freesound/539823__ristooooo1__bubbles-001.wav"
+dest_files=[ "res://.import/539823__ristooooo1__bubbles-001.wav-6acfe5ae16b4c7b6c4681843214e7233.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

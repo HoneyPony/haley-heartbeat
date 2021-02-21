@@ -9,6 +9,8 @@ var damage: float = 1
 
 export var piercing = 1
 
+var beat = false
+
 func delete():
 	if is_deleting:
 		return
@@ -34,6 +36,12 @@ func hit_something(what):
 	get_parent().add_child(imp)
 	
 	return true
+	
+func _ready():
+	if beat:
+		$Shoot/Beat.play()
+	else:
+		$Shoot.play()
 
 func _process(delta):
 	position.y += velocity * delta

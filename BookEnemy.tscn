@@ -1,0 +1,116 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://BookEnemy.gd" type="Script" id=1]
+[ext_resource path="res://graphics/book/book.png0001.png" type="Texture" id=2]
+[ext_resource path="res://graphics/book/book_hit0001.png" type="Texture" id=3]
+[ext_resource path="res://graphics/book/book_hit0007.png" type="Texture" id=4]
+[ext_resource path="res://graphics/book/book.png0008.png" type="Texture" id=5]
+[ext_resource path="res://graphics/book/book.png0006.png" type="Texture" id=6]
+[ext_resource path="res://graphics/book/book.png0002.png" type="Texture" id=7]
+[ext_resource path="res://graphics/book/book.png0003.png" type="Texture" id=8]
+[ext_resource path="res://graphics/book/book.png0005.png" type="Texture" id=9]
+[ext_resource path="res://graphics/book/book.png0009.png" type="Texture" id=10]
+[ext_resource path="res://graphics/book/book_hit0000.png" type="Texture" id=11]
+[ext_resource path="res://graphics/book/book.png0004.png" type="Texture" id=12]
+[ext_resource path="res://graphics/book/book_hit0002.png" type="Texture" id=13]
+[ext_resource path="res://graphics/book/book_hit0003.png" type="Texture" id=14]
+[ext_resource path="res://graphics/book/book_hit0005.png" type="Texture" id=15]
+[ext_resource path="res://graphics/book/book_hit0006.png" type="Texture" id=16]
+[ext_resource path="res://graphics/book/book.png0000.png" type="Texture" id=17]
+[ext_resource path="res://graphics/book/book.png0007.png" type="Texture" id=18]
+[ext_resource path="res://graphics/book/book_hit0009.png" type="Texture" id=19]
+[ext_resource path="res://graphics/book/book_hit0004.png" type="Texture" id=20]
+[ext_resource path="res://graphics/book/book_hit0008.png" type="Texture" id=21]
+[ext_resource path="res://graphics/shadow_circle_big.svg" type="Texture" id=162]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 24.0
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 3 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 4 ), ExtResource( 21 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 24.0
+} ]
+
+[sub_resource type="Animation" id=3]
+resource_name = "Flash"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=9]
+blend_mode = 3
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 45.5732
+height = 8.72278
+
+[sub_resource type="Animation" id=5]
+resource_name = "MatchJump"
+length = 1.875
+loop = true
+step = 0.042
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.63, 1.05, 1.512, 1.89 ),
+"transitions": PoolRealArray( 1, 0.5, 1, 2, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -112 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Book" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Anim" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -60.6757 )
+frames = SubResource( 10 )
+
+[node name="Hit" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -60.6757 )
+frames = SubResource( 11 )
+
+[node name="Anim" type="AnimationPlayer" parent="Hit"]
+anims/Flash = SubResource( 3 )
+
+[node name="shadow_circle_big" type="Sprite" parent="."]
+material = SubResource( 9 )
+position = Vector2( 1.30547, -11.2995 )
+scale = Vector2( 0.385751, 0.385751 )
+z_index = -1
+texture = ExtResource( 162 )
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2( 1.19055, -58.3036 )
+shape = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hitbox"]
+autoplay = "MatchJump"
+anims/MatchJump = SubResource( 5 )
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hit"]

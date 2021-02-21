@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/player_shoot.wav-b0dc78f5f29e745a20a64ca70f119fa7.sample"
+
+[deps]
+
+source_file="res://freesound/player_shoot.wav"
+dest_files=[ "res://.import/player_shoot.wav-b0dc78f5f29e745a20a64ca70f119fa7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

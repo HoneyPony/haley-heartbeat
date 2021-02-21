@@ -1,7 +1,7 @@
 extends Sprite
 
-const FIRST_GRACE_TIME = 0.15
-const SECOND_GRACE_TIME = 0.15
+const FIRST_GRACE_TIME = 0.1
+const SECOND_GRACE_TIME = 0.2
 
 var time_since_hearbeat = FIRST_GRACE_TIME
 var pretend_time_since_heartbeat = 0

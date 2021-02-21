@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="40"
+   viewBox="0 0 8.4666659 10.583334"
+   version="1.1"
+   id="svg1426"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="writing_bullet.svg">
+  <defs
+     id="defs1420" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="-2.3989575"
+     inkscape:cy="18.183822"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1620"
+     inkscape:window-height="1018"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1423">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#1300cc;fill-opacity:1;stroke:none;stroke-width:2.09505;stroke-linecap:round"
+       d="M 4.6820572,10.450962 0.75758721,4.3143159 5.2985213,4.5601477 3.8205803,0.16062797 7.250826,6.3379159 3.3964783,6.0255539 Z"
+       id="path1989"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="fill:#4435d4;fill-opacity:1;stroke:none;stroke-width:2.09505;stroke-linecap:round"
+       d="M 4.6820572,10.450962 3.3964783,6.0255539 6.7154969,5.9539988 3.8205803,0.16062797 8.1412972,6.803389 4.2869495,6.491027 Z"
+       id="path1991"
+       sodipodi:nodetypes="ccccccc" />
+  </g>
+</svg>

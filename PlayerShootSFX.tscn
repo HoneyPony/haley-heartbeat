@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://freesound/player_shoot.wav" type="AudioStream" id=1]
+[ext_resource path="res://freesound/player_shoot_beat.wav" type="AudioStream" id=2]
+
+[node name="Shoot" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="Beat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -10.0
+bus = "SFX"

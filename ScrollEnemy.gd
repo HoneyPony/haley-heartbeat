@@ -67,6 +67,7 @@ func _process(delta):
 	if $Anim.frame == JUMP_END and anim_stage < 2:
 		anim_stage = 2
 		
+		$Shoot.play()
 		for i in range(0, rand_range(2, 5)):
 			var bullet = OrbBullet.instance()
 			bullet.position = position + polar2cartesian(rand_range(0, 48), rand_range(0, 6.28))
@@ -80,3 +81,5 @@ func _on_hit(body):
 		if health <= 0:
 			Global.enemy_count -= 1
 			queue_free()
+			
+		$HitS.play()
