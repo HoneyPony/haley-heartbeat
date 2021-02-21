@@ -231,7 +231,7 @@ anims/Flash = SubResource( 3 )
 
 [node name="shadow_circle_big" type="Sprite" parent="."]
 material = SubResource( 4 )
-position = Vector2( 1.30547, -11.2995 )
+position = Vector2( -2.46461, -8.1247 )
 scale = Vector2( 0.385751, 0.385751 )
 z_index = -4
 texture = ExtResource( 162 )

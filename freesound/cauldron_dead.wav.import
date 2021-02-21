@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cauldron_dead.wav-7b66a0bd3cb7b48bd36c56a8fe6232b5.sample"
+
+[deps]
+
+source_file="res://freesound/cauldron_dead.wav"
+dest_files=[ "res://.import/cauldron_dead.wav-7b66a0bd3cb7b48bd36c56a8fe6232b5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

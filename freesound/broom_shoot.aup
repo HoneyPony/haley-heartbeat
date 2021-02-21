@@ -1,0 +1,120 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="broom_shoot_data" version="1.3.0" audacityversion="2.4.2" sel0="0.0000000000" sel1="0.0000000000" vpos="320" h="0.0000000000" zoom="102.9380988546" rate="48000.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="YEAR" value="2017"/>
+		<tag name="ALBUM" value="Klauzury"/>
+		<tag name="TRACKNUMBER" value="017"/>
+		<tag name="ARTIST" value="Klára Kopřivíková "/>
+	</tags>
+	<wavetrack name="378313__13f-panska-koprivikova-klara__sweep" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="1" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1352269">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808c51.au" len="262144" min="-0.465607" max="0.331268" rms="0.0146"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e08084f2.au" len="262144" min="-0.29248" max="0.38443" rms="0.016893"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0808c34.au" len="262144" min="-0.18454" max="0.245392" rms="0.015243"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e08083e0.au" len="262144" min="-0.25351" max="0.235535" rms="0.015762"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e08082b0.au" len="262144" min="-0.644562" max="0.670502" rms="0.027834"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e08084e0.au" len="41549" min="-0.579132" max="0.594086" rms="0.027428"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="378313__13f-panska-koprivikova-klara__sweep" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="1" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1352269">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808940.au" len="262144" min="-0.320892" max="0.207916" rms="0.011906"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e08081e9.au" len="262144" min="-0.294403" max="0.240295" rms="0.011983"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0808dc0.au" len="262144" min="-0.144287" max="0.148743" rms="0.014114"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0808521.au" len="262144" min="-0.268372" max="0.264069" rms="0.014643"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e080896c.au" len="262144" min="-0.44043" max="0.389832" rms="0.02086"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e08081dd.au" len="41549" min="-0.51416" max="0.505463" rms="0.022661"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="378313__13f-panska-koprivikova-klara__sweep" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.36914583" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="18652">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808e44.au" len="18652" min="-0.118134" max="0.151489" rms="0.021384"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="378313__13f-panska-koprivikova-klara__sweep" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.36914583" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="18652">
+				<waveblock start="0">
+					<simpleblockfile filename="e08088ff.au" len="18652" min="-0.113129" max="0.103394" rms="0.018316"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="378313__13f-panska-koprivikova-klara__sweep" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.08743750" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="28911">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808bca.au" len="28911" min="-0.057098" max="0.062744" rms="0.008593"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="378313__13f-panska-koprivikova-klara__sweep" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.08743750" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="28911">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808692.au" len="28911" min="-0.048767" max="0.053772" rms="0.009067"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="378313__13f-panska-koprivikova-klara__sweep" isSelected="1" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.04856250" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="18652">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808a31.au" len="18652" min="-0.138555" max="0.154255" rms="0.01748"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="378313__13f-panska-koprivikova-klara__sweep" isSelected="1" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="48000" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.04856250" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="18652">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808493.au" len="18652" min="-0.124904" max="0.118632" rms="0.021758"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

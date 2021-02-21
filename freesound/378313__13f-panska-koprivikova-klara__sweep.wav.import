@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/378313__13f-panska-koprivikova-klara__sweep.wav-297f830105724f5e12006b13ac0bc4dc.sample"
+
+[deps]
+
+source_file="res://freesound/378313__13f-panska-koprivikova-klara__sweep.wav"
+dest_files=[ "res://.import/378313__13f-panska-koprivikova-klara__sweep.wav-297f830105724f5e12006b13ac0bc4dc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

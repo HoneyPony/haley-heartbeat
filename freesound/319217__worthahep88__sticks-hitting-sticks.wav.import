@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/319217__worthahep88__sticks-hitting-sticks.wav-5bbb321e1634002ebca6ee0fbd539784.sample"
+
+[deps]
+
+source_file="res://freesound/319217__worthahep88__sticks-hitting-sticks.wav"
+dest_files=[ "res://.import/319217__worthahep88__sticks-hitting-sticks.wav-5bbb321e1634002ebca6ee0fbd539784.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

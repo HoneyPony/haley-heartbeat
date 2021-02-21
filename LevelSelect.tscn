@@ -15,7 +15,7 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxTexture" id=6]
+[sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, -20, 32, 32 )
 margin_left = 32.0
@@ -28,12 +28,12 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="DynamicFontData" id=7]
+[sub_resource type="DynamicFontData" id=6]
 font_path = "res://font/ptwht/playtime.ttf"
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=7]
 size = 64
-font_data = SubResource( 7 )
+font_data = SubResource( 6 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 6 )
@@ -63,16 +63,18 @@ __meta__ = {
 }
 
 [node name="Level0" type="Button" parent="."]
-margin_left = 278.583
-margin_top = 153.458
-margin_right = 468.583
-margin_bottom = 231.458
+margin_left = 295.251
+margin_top = 164.57
+margin_right = 485.251
+margin_bottom = 242.57
+focus_neighbour_top = NodePath("../Level5")
+focus_neighbour_bottom = NodePath("../Level1")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 6 )
+custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )
@@ -86,16 +88,18 @@ __meta__ = {
 }
 
 [node name="Level1" type="Button" parent="."]
-margin_left = 123.657
-margin_top = 234.818
-margin_right = 313.657
-margin_bottom = 312.818
+margin_left = 300.652
+margin_top = 253.867
+margin_right = 490.652
+margin_bottom = 331.867
+focus_neighbour_top = NodePath("../Level0")
+focus_neighbour_bottom = NodePath("../Level2")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 6 )
+custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )
@@ -109,16 +113,18 @@ __meta__ = {
 }
 
 [node name="Level2" type="Button" parent="."]
-margin_left = 123.657
-margin_top = 330.856
-margin_right = 313.657
-margin_bottom = 408.856
+margin_left = 300.652
+margin_top = 349.905
+margin_right = 490.652
+margin_bottom = 427.905
+focus_neighbour_top = NodePath("../Level1")
+focus_neighbour_bottom = NodePath("../Level3")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 6 )
+custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )
@@ -132,16 +138,18 @@ __meta__ = {
 }
 
 [node name="Level3" type="Button" parent="."]
-margin_left = 123.657
-margin_top = 421.337
-margin_right = 313.657
-margin_bottom = 499.337
+margin_left = 300.652
+margin_top = 440.386
+margin_right = 490.652
+margin_bottom = 518.386
+focus_neighbour_top = NodePath("../Level2")
+focus_neighbour_bottom = NodePath("../Level4")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 6 )
+custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )
@@ -155,16 +163,18 @@ __meta__ = {
 }
 
 [node name="Level4" type="Button" parent="."]
-margin_left = 123.657
-margin_top = 511.026
-margin_right = 313.657
-margin_bottom = 589.026
+margin_left = 300.652
+margin_top = 530.075
+margin_right = 490.652
+margin_bottom = 608.075
+focus_neighbour_top = NodePath("../Level3")
+focus_neighbour_bottom = NodePath("../Level5")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 6 )
+custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )
@@ -177,9 +187,50 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Level5" type="Button" parent="."]
+margin_left = 300.652
+margin_top = 626.075
+margin_right = 490.652
+margin_bottom = 704.075
+focus_neighbour_top = NodePath("../Level4")
+focus_neighbour_bottom = NodePath("../Level0")
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )
+custom_colors/font_color_pressed = Color( 0.634766, 0.109812, 0.404693, 1 )
+text = "Level 5"
+flat = true
+align = 0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Transition" parent="." instance=ExtResource( 5 )]
+
+[node name="FocusGrab" type="Button" parent="."]
+margin_left = -189.736
+margin_top = 324.841
+margin_right = -177.736
+margin_bottom = 344.841
+focus_neighbour_left = NodePath("../Level0")
+focus_neighbour_top = NodePath("../Level0")
+focus_neighbour_right = NodePath("../Level0")
+focus_neighbour_bottom = NodePath("../Level0")
+focus_next = NodePath("../Level0")
+focus_previous = NodePath("../Level0")
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Level0" to="Level0" method="_on_pressed"]
 [connection signal="pressed" from="Level1" to="Level1" method="_on_pressed"]
 [connection signal="pressed" from="Level2" to="Level2" method="_on_pressed"]
 [connection signal="pressed" from="Level3" to="Level3" method="_on_pressed"]
 [connection signal="pressed" from="Level4" to="Level4" method="_on_pressed"]
+[connection signal="pressed" from="Level5" to="Level5" method="_on_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://LoseScreen.gd" type="Script" id=1]
 [ext_resource path="res://graphics/haley_hat.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://ScreenTransition.tscn" type="PackedScene" id=5]
 [ext_resource path="res://font/font1.tres" type="DynamicFont" id=6]
 [ext_resource path="res://graphics/button_focus_small.svg" type="Texture" id=7]
+[ext_resource path="res://lmms/failure.ogg" type="AudioStream" id=8]
+[ext_resource path="res://DeleteSelf.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFontData" id=7]
 font_path = "res://font/ptwht/playtime.ttf"
@@ -85,6 +87,8 @@ margin_left = 279.909
 margin_top = 458.947
 margin_right = 548.909
 margin_bottom = 536.947
+focus_neighbour_top = NodePath("../Level1")
+focus_neighbour_bottom = NodePath("../Level1")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 6 )
@@ -108,6 +112,8 @@ margin_left = 223.556
 margin_top = 831.968
 margin_right = 558.556
 margin_bottom = 909.968
+focus_neighbour_top = NodePath("../Level0")
+focus_neighbour_bottom = NodePath("../Level0")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 6 )
@@ -127,5 +133,26 @@ __meta__ = {
 }
 
 [node name="Transition" parent="." instance=ExtResource( 5 )]
+
+[node name="FocusGrab" type="Button" parent="."]
+margin_left = -176.704
+margin_top = 50.3968
+margin_right = -164.704
+margin_bottom = 70.3968
+focus_neighbour_left = NodePath("../Level0")
+focus_neighbour_top = NodePath("../Level0")
+focus_neighbour_right = NodePath("../Level0")
+focus_neighbour_bottom = NodePath("../Level0")
+focus_next = NodePath("../Level0")
+focus_previous = NodePath("../Level0")
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+bus = "Music"
+script = ExtResource( 9 )
 [connection signal="pressed" from="Level0" to="." method="_level_sel"]
 [connection signal="pressed" from="Level1" to="." method="_menu_sel"]

@@ -12,6 +12,9 @@ func transition_to(scene, scene_from):
 	$Out.play()
 	
 func _ready():
+	if Global.first_trans:
+		Global.first_trans = false
+		return
 	$In.show()
 	$In.play()
 	

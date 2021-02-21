@@ -18,6 +18,7 @@ func _ready():
 	home_x = position.x
 
 var OrbBullet = preload("res://CrystalBullet.tscn")
+var Explode = preload("res://CrystalExplode.tscn")
 
 var anim_stage = 0
 
@@ -61,6 +62,11 @@ func _on_hit(body):
 		health -= body.damage
 		if health <= 0:
 			Global.enemy_count -= 1
+			
+			var ex = Explode.instance()
+			ex.position = $Anim.global_position
+			get_parent().add_child(ex)
+			
 			queue_free()
 			
 		$HitS.play()

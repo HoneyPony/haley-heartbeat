@@ -157,11 +157,18 @@ func process_fall(delta):
 	fall_dy -= 300 * delta
 	
 	scale -= Vector2(1, 1) * 2 * delta
+	if scale.x <= 0:
+		scale.x = 0
+		scale.y = 0
+	if health <= 0:
+		return
 	if scale.x <= 0.2:
 		scale = Vector2(1, 1)
 		position = respawn_point + Vector2(0, fall_dy)
 		state = State.Normal
 		$Fall.hide()
+		health_invincible = true
+		$AnimationPlayer.play("Invincible")
 	
 onready var default_col = $Harm.collision_layer
 onready var default_mask = $Harm.collision_mask
@@ -178,12 +185,19 @@ func _ready():
 		tutorial_invincible = true
 
 func _physics_process(delta):
+	$Sprite.visible = state != State.Fall
+	
 	if lose_time > 0:
 		$Walk.hide()
-		$Fall.hide()
+		$Fall.visible = state == State.Fall
 		$WalkShoot.hide()
 		$Jump.hide()
-		$Flop.show()
+		
+		$Flop.visible = state != State.Fall
+		
+		if state == State.Fall:
+			process_fall(delta)
+		
 		
 		lose_time -= delta
 		var db = AudioServer.get_bus_volume_db(audio_bus) - 10 * delta
@@ -194,7 +208,7 @@ func _physics_process(delta):
 			lose_time = 100
 		return
 	
-	if jump_timer > 0 or health_invincible:
+	if jump_timer > 0 or health_invincible or Global.opt_invinc:
 		$Harm.collision_layer = 0
 		$Harm.collision_mask = 0
 	else:
@@ -271,7 +285,7 @@ func take_health(amount):
 		$Fall.hide()
 		$WalkShoot.hide()
 		$Jump.hide()
-		$Flop.show()
+		$Flop.visible = state != State.Fall
 		$Flop.play()
 		$OwBig.play()
 		lose_time = 1
@@ -279,11 +293,12 @@ func take_health(amount):
 		set_health_prop(0)
 		return
 	
-	health_invincible = true
-	$AnimationPlayer.play("Invincible")
+	
 	
 
 func _on_hit(body):
+	if Global.opt_invinc:
+		return
 	if health_invincible:
 		return
 	if jump_timer > 0:
@@ -292,8 +307,12 @@ func _on_hit(body):
 	if body.hit_something(self):
 		$Ow.play()
 		take_health(1)
+		health_invincible = true
+		$AnimationPlayer.play("Invincible")
 		
 func _on_pit(area):
+	if Global.opt_invinc:
+		return
 	if health_invincible:
 		return
 	if jump_timer > 0:
@@ -313,4 +332,5 @@ func _on_pit(area):
 	$Walk.hide()
 	$WalkShoot.hide()
 	$Jump.hide()
+	$OwVerb.play()
 	fall_dy = 0

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://graphics/house.png" type="Texture" id=1]
+[ext_resource path="res://House.gd" type="Script" id=2]
+
+[node name="House" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="house" type="Sprite" parent="."]
+position = Vector2( 544.642, -15.429 )
+texture = ExtResource( 1 )

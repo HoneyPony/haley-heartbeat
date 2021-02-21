@@ -1,0 +1,251 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://StyleHeartBig.tres" type="StyleBox" id=1]
+[ext_resource path="res://graphics/haley_hat.png" type="Texture" id=2]
+[ext_resource path="res://graphics/menu_idea.png" type="Texture" id=3]
+[ext_resource path="res://TextHover.gd" type="Script" id=4]
+[ext_resource path="res://Options.gd" type="Script" id=5]
+[ext_resource path="res://ScreenTransition.tscn" type="PackedScene" id=6]
+[ext_resource path="res://font/font1.tres" type="DynamicFont" id=7]
+[ext_resource path="res://graphics/button_focus_small.svg" type="Texture" id=8]
+[ext_resource path="res://Volume.gd" type="Script" id=9]
+[ext_resource path="res://graphics/checked_box.svg" type="Texture" id=10]
+[ext_resource path="res://graphics/unchecked_box.svg" type="Texture" id=11]
+[ext_resource path="res://InvincibleBox.gd" type="Script" id=12]
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://font/ptwht/playtime.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 64
+use_filter = true
+font_data = SubResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 1, 1, 1, 1 )
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="DynamicFont" id=9]
+size = 64
+font_data = SubResource( 7 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="menu_idea" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="haley_pic" type="Sprite" parent="."]
+position = Vector2( -617.471, 578.844 )
+scale = Vector2( 0.571982, 0.571982 )
+z_index = 5
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 251.839
+margin_top = 51.2449
+margin_right = 869.839
+margin_bottom = 169.245
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_constants/line_spacing = 0
+text = "Options"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+visible = false
+margin_left = 300.172
+margin_top = 797.103
+margin_right = 340.172
+margin_bottom = 837.103
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureButton"]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 7 )
+text = "Play"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 129.877
+margin_top = 827.289
+margin_right = 654.877
+margin_bottom = 963.289
+focus_neighbour_top = NodePath("../CheckBox")
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = ExtResource( 1 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )
+custom_colors/font_color_pressed = Color( 0.634766, 0.109812, 0.404693, 1 )
+text = "Back to Menu"
+flat = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Transition" parent="." instance=ExtResource( 6 )]
+
+[node name="FocusGrab" type="Button" parent="."]
+margin_left = 342.417
+margin_top = 1029.24
+margin_right = 354.417
+margin_bottom = 1049.24
+focus_neighbour_left = NodePath("../Button")
+focus_neighbour_top = NodePath("../Button")
+focus_neighbour_right = NodePath("../Button")
+focus_neighbour_bottom = NodePath("../Button")
+focus_next = NodePath("../Button")
+focus_previous = NodePath("../Button")
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Master" type="HSlider" parent="."]
+margin_left = 393.558
+margin_top = 295.627
+margin_right = 637.558
+margin_bottom = 327.627
+focus_neighbour_bottom = NodePath("../Music")
+custom_icons/grabber_disabled = ExtResource( 8 )
+custom_icons/grabber_highlight = ExtResource( 8 )
+custom_icons/grabber = ExtResource( 8 )
+custom_styles/slider = SubResource( 12 )
+value = 50.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="HSlider" parent="."]
+margin_left = 393.856
+margin_top = 377.268
+margin_right = 637.856
+margin_bottom = 409.268
+focus_neighbour_top = NodePath("../Master")
+focus_neighbour_bottom = NodePath("../SFX")
+custom_icons/grabber_disabled = ExtResource( 8 )
+custom_icons/grabber_highlight = ExtResource( 8 )
+custom_icons/grabber = ExtResource( 8 )
+custom_styles/slider = SubResource( 12 )
+value = 50.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+bus_name = "Music"
+
+[node name="SFX" type="HSlider" parent="."]
+margin_left = 397.671
+margin_top = 452.31
+margin_right = 641.671
+margin_bottom = 484.31
+focus_neighbour_top = NodePath("../Music")
+focus_neighbour_bottom = NodePath("../CheckBox")
+custom_icons/grabber_disabled = ExtResource( 8 )
+custom_icons/grabber_highlight = ExtResource( 8 )
+custom_icons/grabber = ExtResource( 8 )
+custom_styles/slider = SubResource( 12 )
+value = 50.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+bus_name = "SFX"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 177.255
+margin_top = 270.72
+margin_right = 378.255
+margin_bottom = 348.72
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Master"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 187.819
+margin_top = 589.169
+margin_right = 461.819
+margin_bottom = 667.169
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Invincibility"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 177.255
+margin_top = 348.72
+margin_right = 378.255
+margin_bottom = 426.72
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Music"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 177.255
+margin_top = 427.469
+margin_right = 378.255
+margin_bottom = 505.469
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "SFX"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 504.844
+margin_top = 592.618
+margin_right = 768.844
+margin_bottom = 856.618
+rect_scale = Vector2( 0.3, 0.3 )
+focus_neighbour_top = NodePath("../SFX")
+focus_neighbour_bottom = NodePath("../Button")
+custom_icons/checked = ExtResource( 10 )
+custom_icons/unchecked = ExtResource( 11 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_button"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://graphics/heart_indicator.svg" type="Texture" id=2]
@@ -23,6 +23,25 @@
 [ext_resource path="res://graphics/button_dow.svg" type="Texture" id=21]
 [ext_resource path="res://Tutorial.gd" type="Script" id=22]
 [ext_resource path="res://ScreenTransition.tscn" type="PackedScene" id=23]
+[ext_resource path="res://LagHelper.gd" type="Script" id=24]
+[ext_resource path="res://BookExplode.tscn" type="PackedScene" id=25]
+[ext_resource path="res://CrystalExplode.tscn" type="PackedScene" id=26]
+[ext_resource path="res://CauldronEnemy.tscn" type="PackedScene" id=27]
+[ext_resource path="res://ScrollEnemyII.tscn" type="PackedScene" id=28]
+[ext_resource path="res://WritingBullet2.tscn" type="PackedScene" id=30]
+[ext_resource path="res://BookEnemy.tscn" type="PackedScene" id=31]
+[ext_resource path="res://WritingBullet.tscn" type="PackedScene" id=32]
+[ext_resource path="res://CrystalEnemy.tscn" type="PackedScene" id=33]
+[ext_resource path="res://CrystalBullet.tscn" type="PackedScene" id=34]
+[ext_resource path="res://ScrollEnemy.tscn" type="PackedScene" id=35]
+[ext_resource path="res://ScrollExplode.tscn" type="PackedScene" id=36]
+[ext_resource path="res://CauldronExplode.tscn" type="PackedScene" id=37]
+[ext_resource path="res://BroomExplode.tscn" type="PackedScene" id=38]
+[ext_resource path="res://BroomEnemy.tscn" type="PackedScene" id=39]
+[ext_resource path="res://BroomBullet.tscn" type="PackedScene" id=40]
+[ext_resource path="res://BasicArrowII.tscn" type="PackedScene" id=42]
+[ext_resource path="res://BasicArrowIII.tscn" type="PackedScene" id=43]
+[ext_resource path="res://BasicArrow.tscn" type="PackedScene" id=44]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Beat"
@@ -98,6 +117,49 @@ font_path = "res://font/ptwht/playtime.ttf"
 size = 48
 use_filter = true
 font_data = SubResource( 7 )
+
+[sub_resource type="Animation" id=9]
+resource_name = "Default"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "Level1"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [sub_resource type="TileSet" id=4]
 0/name = "incredibly_boring_shrub.svg 0"
@@ -201,6 +263,30 @@ z_index = -5
 texture = ExtResource( 17 )
 centered = false
 offset = Vector2( 0, -64 )
+
+[node name="Intro" type="Label" parent="Layer"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 4.58691
+margin_top = 578.91
+margin_right = 771.587
+margin_bottom = 953.91
+custom_fonts/font = SubResource( 8 )
+text = "Oh no! The forest trail to
+your house has been overrun
+with EVIL enchanted objects...
+
+It seems you must fight your
+way home!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Layer/Intro"]
+autoplay = "Default"
+anims/Default = SubResource( 9 )
+anims/Level1 = SubResource( 10 )
 
 [node name="Tutorial" type="CanvasLayer" parent="."]
 script = ExtResource( 22 )
@@ -428,3 +514,45 @@ position = Vector2( 384, 312.108 )
 script = ExtResource( 18 )
 
 [node name="Transition" parent="." instance=ExtResource( 23 )]
+
+[node name="LagHelper" type="Node2D" parent="."]
+pause_mode = 1
+script = ExtResource( 24 )
+
+[node name="BasicArrow" parent="LagHelper" instance=ExtResource( 44 )]
+
+[node name="BasicArrowII" parent="LagHelper" instance=ExtResource( 42 )]
+
+[node name="BasicArrowIII" parent="LagHelper" instance=ExtResource( 42 )]
+
+[node name="BasicArrowIV" parent="LagHelper" instance=ExtResource( 43 )]
+
+[node name="Scroll" parent="LagHelper" instance=ExtResource( 35 )]
+
+[node name="Scroll2" parent="LagHelper" instance=ExtResource( 28 )]
+
+[node name="Book" parent="LagHelper" instance=ExtResource( 31 )]
+
+[node name="Cauldron" parent="LagHelper" instance=ExtResource( 27 )]
+
+[node name="Crystal" parent="LagHelper" instance=ExtResource( 33 )]
+
+[node name="Broom" parent="LagHelper" instance=ExtResource( 39 )]
+
+[node name="ScrollExplode" parent="LagHelper" instance=ExtResource( 36 )]
+
+[node name="CauldronExplode" parent="LagHelper" instance=ExtResource( 37 )]
+
+[node name="BookExplode" parent="LagHelper" instance=ExtResource( 25 )]
+
+[node name="CrystalExplode" parent="LagHelper" instance=ExtResource( 26 )]
+
+[node name="BroomExplode" parent="LagHelper" instance=ExtResource( 38 )]
+
+[node name="WritingBullet" parent="LagHelper" instance=ExtResource( 32 )]
+
+[node name="CrystalBullet" parent="LagHelper" instance=ExtResource( 34 )]
+
+[node name="BroomBullet" parent="LagHelper" instance=ExtResource( 40 )]
+
+[node name="GreenSphereBullet3" parent="LagHelper" instance=ExtResource( 30 )]

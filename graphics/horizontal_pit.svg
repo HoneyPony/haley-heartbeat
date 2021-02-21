@@ -67,6 +67,19 @@
        x2="380.0376"
        y2="243.31299"
        gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter11958"
+       x="-8.430247e-05"
+       width="1.0001686"
+       y="-0.00081278245"
+       height="1.0016256">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.019895468"
+         id="feGaussianBlur11960" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -133,7 +146,7 @@
      id="layer2"
      inkscape:label="Layer 2"
      sodipodi:insensitive="true"
-     style="display:inline">
+     style="display:none">
     <path
        sodipodi:type="star"
        style="fill:#221200;fill-opacity:1;stroke-width:0.333121;stroke-linecap:round"
@@ -9989,7 +10002,7 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Layer 4"
-     style="display:inline;filter:url(#filter11491)">
+     style="display:inline;filter:url(#filter11958)">
     <path
        id="path11471"
        style="fill:url(#linearGradient11940);fill-opacity:1;stroke-width:5.00001;stroke-linecap:round"
