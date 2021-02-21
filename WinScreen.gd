@@ -8,8 +8,8 @@ var next_level
 func _ready():
 	$FocusGrab.grab_focus()
 	next_level = Global.level + 1
-	if next_level > 4:
-		next_level = 4
+	if next_level > 5:
+		next_level = 5
 	if next_level < 0:
 		next_level = 0
 	pass

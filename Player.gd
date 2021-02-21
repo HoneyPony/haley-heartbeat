@@ -281,14 +281,15 @@ func take_health(amount):
 	
 	health -= amount
 	if health < 0:
-		$Walk.hide()
-		$Fall.hide()
-		$WalkShoot.hide()
-		$Jump.hide()
-		$Flop.visible = state != State.Fall
-		$Flop.play()
-		$OwBig.play()
-		lose_time = 1
+		if lose_time < -0.5:
+			$Walk.hide()
+			$Fall.hide()
+			$WalkShoot.hide()
+			$Jump.hide()
+			$Flop.visible = state != State.Fall
+			$Flop.play()
+			$OwBig.play()
+			lose_time = 1
 		
 		set_health_prop(0)
 		return
