@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/185611__coobek__metal-tick-1.wav-b6b9eabab288eb7903a8d7bc8dabc7a0.sample"
+
+[deps]
+
+source_file="res://freesound/185611__coobek__metal-tick-1.wav"
+dest_files=[ "res://.import/185611__coobek__metal-tick-1.wav-b6b9eabab288eb7903a8d7bc8dabc7a0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

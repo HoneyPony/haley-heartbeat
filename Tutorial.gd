@@ -76,6 +76,7 @@ func start_fade_in():
 	if conditions[label_index] == Cond.ShowHealth:
 		heart_ui.transform.origin = Vector2.ZERO
 		get_node("../YSort/Player").restore_health()
+		get_node("../YSort/Player").tutorial_invincible = false
 	
 var TutPit = preload("res://HorizontalPitTut.tscn")
 	

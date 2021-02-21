@@ -40,6 +40,7 @@ func _process(delta):
 		position.y -= 300 * delta
 		
 	if bullet_timer < 0:
+		$Shoot.play()
 		bullet_timer = B_TIME
 		
 		bullet(Vector2(-1, -1).normalized() * 700)
@@ -67,3 +68,5 @@ func _on_hit(body):
 		if health <= 0:
 			Global.enemy_count -= 1
 			queue_free()
+			
+		$HitS.play()

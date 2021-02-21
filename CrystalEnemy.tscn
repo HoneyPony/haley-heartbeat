@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=154 format=2]
 
 [ext_resource path="res://CrystalEnemy.gd" type="Script" id=1]
 [ext_resource path="res://graphics/crystal/crystal.png0003.png" type="Texture" id=2]
@@ -61,6 +61,29 @@
 [ext_resource path="res://graphics/crystal/crystal.png0064.png" type="Texture" id=59]
 [ext_resource path="res://graphics/crystal/crystal.png0048.png" type="Texture" id=60]
 [ext_resource path="res://graphics/crystal/crystal.png0065.png" type="Texture" id=61]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0036.png" type="Texture" id=62]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0039.png" type="Texture" id=63]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0041.png" type="Texture" id=64]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0046.png" type="Texture" id=65]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0037.png" type="Texture" id=66]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0047.png" type="Texture" id=67]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0044.png" type="Texture" id=68]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0045.png" type="Texture" id=69]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0040.png" type="Texture" id=70]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0042.png" type="Texture" id=71]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0043.png" type="Texture" id=72]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0038.png" type="Texture" id=73]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0064.png" type="Texture" id=74]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0050.png" type="Texture" id=75]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0058.png" type="Texture" id=76]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0049.png" type="Texture" id=77]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0063.png" type="Texture" id=78]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0054.png" type="Texture" id=79]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0067.png" type="Texture" id=80]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0070.png" type="Texture" id=81]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0066.png" type="Texture" id=82]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0071.png" type="Texture" id=83]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0059.png" type="Texture" id=84]
 [ext_resource path="res://graphics/crystal/crystal.png0017.png" type="Texture" id=85]
 [ext_resource path="res://graphics/crystal/crystal.png0020.png" type="Texture" id=86]
 [ext_resource path="res://graphics/crystal/crystal.png0005.png" type="Texture" id=87]
@@ -73,9 +96,58 @@
 [ext_resource path="res://graphics/crystal/crystal.png0019.png" type="Texture" id=94]
 [ext_resource path="res://graphics/crystal/crystal.png0006.png" type="Texture" id=95]
 [ext_resource path="res://graphics/crystal/crystal.png0018.png" type="Texture" id=96]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0061.png" type="Texture" id=97]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0051.png" type="Texture" id=98]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0048.png" type="Texture" id=99]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0052.png" type="Texture" id=100]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0057.png" type="Texture" id=101]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0065.png" type="Texture" id=102]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0055.png" type="Texture" id=103]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0062.png" type="Texture" id=104]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0069.png" type="Texture" id=105]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0053.png" type="Texture" id=106]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0060.png" type="Texture" id=107]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0068.png" type="Texture" id=108]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0056.png" type="Texture" id=109]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0000.png" type="Texture" id=110]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0002.png" type="Texture" id=111]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0005.png" type="Texture" id=112]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0008.png" type="Texture" id=113]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0004.png" type="Texture" id=114]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0011.png" type="Texture" id=115]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0012.png" type="Texture" id=116]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0013.png" type="Texture" id=117]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0016.png" type="Texture" id=118]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0017.png" type="Texture" id=119]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0009.png" type="Texture" id=120]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0020.png" type="Texture" id=121]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0021.png" type="Texture" id=122]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0023.png" type="Texture" id=123]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0027.png" type="Texture" id=124]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0018.png" type="Texture" id=125]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0030.png" type="Texture" id=126]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0006.png" type="Texture" id=127]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0028.png" type="Texture" id=128]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0031.png" type="Texture" id=129]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0003.png" type="Texture" id=130]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0007.png" type="Texture" id=131]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0032.png" type="Texture" id=132]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0022.png" type="Texture" id=133]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0025.png" type="Texture" id=134]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0026.png" type="Texture" id=135]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0010.png" type="Texture" id=136]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0033.png" type="Texture" id=137]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0024.png" type="Texture" id=138]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0034.png" type="Texture" id=139]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0001.png" type="Texture" id=140]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0029.png" type="Texture" id=141]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0014.png" type="Texture" id=142]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0035.png" type="Texture" id=143]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0019.png" type="Texture" id=144]
+[ext_resource path="res://graphics/crystal/crystal_hit.png0015.png" type="Texture" id=145]
+[ext_resource path="res://freesound/crystal_hit.wav" type="AudioStream" id=146]
+[ext_resource path="res://freesound/crystal_shoot.wav" type="AudioStream" id=147]
 [ext_resource path="res://graphics/shadow_circle_big.svg" type="Texture" id=162]
-[ext_resource path="res://freesound/cauldron_hit.wav" type="AudioStream" id=163]
-[ext_resource path="res://freesound/bubbles.wav" type="AudioStream" id=164]
 
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
@@ -85,9 +157,9 @@ animations = [ {
 "speed": 24.0
 } ]
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ ExtResource( 93 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 87 ), ExtResource( 95 ), ExtResource( 6 ), ExtResource( 89 ), ExtResource( 12 ), ExtResource( 88 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 8 ), ExtResource( 92 ), ExtResource( 85 ), ExtResource( 96 ), ExtResource( 94 ), ExtResource( 86 ), ExtResource( 7 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"frames": [ ExtResource( 110 ), ExtResource( 140 ), ExtResource( 111 ), ExtResource( 130 ), ExtResource( 114 ), ExtResource( 112 ), ExtResource( 127 ), ExtResource( 131 ), ExtResource( 113 ), ExtResource( 120 ), ExtResource( 136 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 142 ), ExtResource( 145 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 125 ), ExtResource( 144 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 133 ), ExtResource( 123 ), ExtResource( 138 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 124 ), ExtResource( 128 ), ExtResource( 141 ), ExtResource( 126 ), ExtResource( 129 ), ExtResource( 132 ), ExtResource( 137 ), ExtResource( 139 ), ExtResource( 143 ), ExtResource( 62 ), ExtResource( 66 ), ExtResource( 73 ), ExtResource( 63 ), ExtResource( 70 ), ExtResource( 64 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 65 ), ExtResource( 67 ), ExtResource( 99 ), ExtResource( 77 ), ExtResource( 75 ), ExtResource( 98 ), ExtResource( 100 ), ExtResource( 106 ), ExtResource( 79 ), ExtResource( 103 ), ExtResource( 109 ), ExtResource( 101 ), ExtResource( 76 ), ExtResource( 84 ), ExtResource( 107 ), ExtResource( 97 ), ExtResource( 104 ), ExtResource( 78 ), ExtResource( 74 ), ExtResource( 102 ), ExtResource( 82 ), ExtResource( 80 ), ExtResource( 108 ), ExtResource( 105 ), ExtResource( 81 ), ExtResource( 83 ) ],
 "loop": true,
 "name": "default",
 "speed": 24.0
@@ -133,7 +205,7 @@ visible = false
 position = Vector2( -0.614319, -53.9834 )
 scale = Vector2( 0.522899, 0.522899 )
 z_index = -1
-frames = SubResource( 7 )
+frames = SubResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -156,13 +228,15 @@ collision_mask = 2
 position = Vector2( 0, -56.3194 )
 shape = SubResource( 5 )
 
-[node name="Bubble" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 164 )
-volume_db = -2.0
+[node name="Shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 147 )
+volume_db = -9.5
+bus = "SFX"
 
 [node name="HitS" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 163 )
-volume_db = -2.0
+stream = ExtResource( 146 )
+volume_db = -4.0
+bus = "SFX"
 
 [node name="BSpawn" type="Position2D" parent="."]
 position = Vector2( -0.176773, -56.7453 )

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/383753__deleted-user-7146007__jumping-on-a-bed.wav-529839d68a4f85bedfa9b86d91af4035.sample"
+
+[deps]
+
+source_file="res://freesound/383753__deleted-user-7146007__jumping-on-a-bed.wav"
+dest_files=[ "res://.import/383753__deleted-user-7146007__jumping-on-a-bed.wav-529839d68a4f85bedfa9b86d91af4035.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

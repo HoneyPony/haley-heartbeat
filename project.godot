@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="HaleyHeart"
+config/name="Haley Heartbeat"
 run/main_scene="res://Display.tscn"
 config/icon="res://icon.png"
 

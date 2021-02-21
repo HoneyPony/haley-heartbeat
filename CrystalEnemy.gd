@@ -31,6 +31,8 @@ func _process(delta):
 		position.y -= 300 * delta
 		
 	if bullet_timer <= 0:
+		$Shoot.play()
+		
 		var bullet = OrbBullet.instance()
 		bullet.home_node = $BSpawn
 		bullet.theta = theta

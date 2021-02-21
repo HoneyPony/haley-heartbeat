@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://BookEnemy.gd" type="Script" id=1]
 [ext_resource path="res://graphics/book/book.png0001.png" type="Texture" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://graphics/book/book_hit0009.png" type="Texture" id=19]
 [ext_resource path="res://graphics/book/book_hit0004.png" type="Texture" id=20]
 [ext_resource path="res://graphics/book/book_hit0008.png" type="Texture" id=21]
+[ext_resource path="res://freesound/book_hit.wav" type="AudioStream" id=22]
+[ext_resource path="res://freesound/book_shoot.wav" type="AudioStream" id=23]
 [ext_resource path="res://graphics/shadow_circle_big.svg" type="Texture" id=162]
 
 [sub_resource type="SpriteFrames" id=10]
@@ -91,4 +93,14 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2( 1.19055, -58.3036 )
 shape = SubResource( 4 )
+
+[node name="HitS" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+volume_db = -6.0
+bus = "SFX"
+
+[node name="Shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+volume_db = -15.0
+bus = "SFX"
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hit"]

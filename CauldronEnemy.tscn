@@ -247,8 +247,10 @@ shape = SubResource( 5 )
 [node name="Bubble" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 163 )
 volume_db = -2.0
+bus = "SFX"
 
 [node name="HitS" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 164 )
 volume_db = -2.0
+bus = "SFX"
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hit"]

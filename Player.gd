@@ -171,6 +171,12 @@ var lose_time = -1
 onready var LoseScreen = load("res://LoseScreen.tscn")
 onready var audio_bus = AudioServer.get_bus_index("GameMusic")
 
+func _ready():
+	AudioServer.set_bus_volume_db(audio_bus, 0)
+	
+	if Global.level == 0:
+		tutorial_invincible = true
+
 func _physics_process(delta):
 	if lose_time > 0:
 		$Walk.hide()
@@ -224,6 +230,8 @@ func _physics_process(delta):
 			$Jump.show()
 			$Jump.frame = 0
 			$Jump.play()
+			
+			$Jump2.play()
 			
 			
 	if jump_timer > 0:

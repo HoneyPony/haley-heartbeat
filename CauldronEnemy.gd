@@ -32,7 +32,7 @@ func _process(delta):
 	if bullet_timer < 0.85:
 		if randf() < 0.7:
 			var bullet = OrbBullet.instance()
-			bullet.position = position + Vector2(rand_range(-44, 44), -60) #polar2cartesian(rand_range(0, 48), rand_range(0, 6.28))
+			bullet.position = position + Vector2(rand_range(-50, 50), -60) #polar2cartesian(rand_range(0, 48), rand_range(0, 6.28))
 			get_parent().add_child(bullet)
 	else:
 		should_bubble = true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/393856__martian__flick-switch-crystal-glass-lights-on.wav-cdf54abed78bbf0ac0bd037c6e023bf9.sample"
+
+[deps]
+
+source_file="res://freesound/393856__martian__flick-switch-crystal-glass-lights-on.wav"
+dest_files=[ "res://.import/393856__martian__flick-switch-crystal-glass-lights-on.wav-cdf54abed78bbf0ac0bd037c6e023bf9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -96,6 +96,11 @@ func send_wave(a_wave):
 	Global.enemy_count = wave.size()
 	
 func next_wave():
+	# Special win condition for tutorial level
+	if Global.level == 0 and wave != null:
+		win_timer = 3
+		return
+	
 	if waveset == null:
 		return
 	
@@ -169,5 +174,8 @@ var level3 = [
 ]
 
 var level4 = [
-	[crystal(2, Vector2(200, 700))]
+	[crystal(2, Vector2(200, 700))],
+	[crystal(1, Vector2(530, 630)), scroll2(1.2, Vector2(200, 800)), scroll2(1.4, Vector2(250, 850))],
+	[crystal(1, Vector2(200, 650)), crystal(1.2, Vector2(568, 700)), book(1.4, Vector2(230, 690)), scroll2(1.5, Vector2(600, 750))],
+	[cauldron(1, Vector2(384, 650)), crystal(0.7, Vector2(384, 700)), scroll2(1, Vector2(200, 800)), scroll2(1, Vector2(584, 800))]
 ]

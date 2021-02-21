@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/484906__spacejoe__book-drop-10.wav-66e37e66823833deed69cde5401d271a.sample"
+
+[deps]
+
+source_file="res://freesound/484906__spacejoe__book-drop-10.wav"
+dest_files=[ "res://.import/484906__spacejoe__book-drop-10.wav-66e37e66823833deed69cde5401d271a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
