@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://StyleHeartBig.tres" type="StyleBox" id=1]
 [ext_resource path="res://graphics/haley_hat.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://graphics/checked_box.svg" type="Texture" id=10]
 [ext_resource path="res://graphics/unchecked_box.svg" type="Texture" id=11]
 [ext_resource path="res://InvincibleBox.gd" type="Script" id=12]
+[ext_resource path="res://graphics/tick_highlighted.svg" type="Texture" id=13]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -41,6 +42,18 @@ expand_margin_bottom = 3.0
 [sub_resource type="DynamicFont" id=8]
 size = 64
 font_data = SubResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color( 1, 0.164706, 0.498039, 1 )
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
@@ -137,9 +150,10 @@ margin_right = 637.558
 margin_bottom = 327.627
 focus_neighbour_bottom = NodePath("../Music")
 custom_icons/grabber_disabled = ExtResource( 8 )
-custom_icons/grabber_highlight = ExtResource( 8 )
+custom_icons/grabber_highlight = ExtResource( 13 )
 custom_icons/grabber = ExtResource( 8 )
 custom_styles/slider = SubResource( 7 )
+step = 10.0
 value = 50.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -154,9 +168,10 @@ margin_bottom = 409.268
 focus_neighbour_top = NodePath("../Master")
 focus_neighbour_bottom = NodePath("../SFX")
 custom_icons/grabber_disabled = ExtResource( 8 )
-custom_icons/grabber_highlight = ExtResource( 8 )
+custom_icons/grabber_highlight = ExtResource( 13 )
 custom_icons/grabber = ExtResource( 8 )
 custom_styles/slider = SubResource( 7 )
+step = 10.0
 value = 50.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -172,9 +187,10 @@ margin_bottom = 484.31
 focus_neighbour_top = NodePath("../Music")
 focus_neighbour_bottom = NodePath("../CheckBox")
 custom_icons/grabber_disabled = ExtResource( 8 )
-custom_icons/grabber_highlight = ExtResource( 8 )
+custom_icons/grabber_highlight = ExtResource( 13 )
 custom_icons/grabber = ExtResource( 8 )
 custom_styles/slider = SubResource( 7 )
+step = 10.0
 value = 50.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -244,6 +260,7 @@ focus_neighbour_top = NodePath("../SFX")
 focus_neighbour_bottom = NodePath("../Button")
 custom_icons/checked = ExtResource( 10 )
 custom_icons/unchecked = ExtResource( 11 )
+custom_styles/focus = SubResource( 9 )
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false

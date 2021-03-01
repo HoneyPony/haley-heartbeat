@@ -1,8 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://graphics/haley_hat.png" type="Texture" id=1]
 [ext_resource path="res://graphics/menu_idea.png" type="Texture" id=2]
-[ext_resource path="res://graphics/button_focus_small.svg" type="Texture" id=3]
+[ext_resource path="res://StyleHeartSmall.tres" type="StyleBox" id=3]
 [ext_resource path="res://font/font1.tres" type="DynamicFont" id=4]
 [ext_resource path="res://ScreenTransition.tscn" type="PackedScene" id=5]
 [ext_resource path="res://LevelSelect.gd" type="Script" id=6]
@@ -14,13 +14,6 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, -24, 32, 72 )
-margin_left = 32.0
-margin_top = 800.0
-expand_margin_left = 40.0
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -71,7 +64,7 @@ focus_neighbour_top = NodePath("../Back")
 focus_neighbour_bottom = NodePath("../Level1")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = ExtResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 7 )
@@ -96,7 +89,7 @@ focus_neighbour_top = NodePath("../Level0")
 focus_neighbour_bottom = NodePath("../Level2")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = ExtResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 7 )
@@ -121,7 +114,7 @@ focus_neighbour_top = NodePath("../Level1")
 focus_neighbour_bottom = NodePath("../Level3")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = ExtResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 7 )
@@ -146,7 +139,7 @@ focus_neighbour_top = NodePath("../Level2")
 focus_neighbour_bottom = NodePath("../Level4")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = ExtResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 7 )
@@ -171,7 +164,7 @@ focus_neighbour_top = NodePath("../Level3")
 focus_neighbour_bottom = NodePath("../Level5")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = ExtResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 7 )
@@ -196,7 +189,7 @@ focus_neighbour_top = NodePath("../Level4")
 focus_neighbour_bottom = NodePath("../Back")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = ExtResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 7 )
@@ -221,7 +214,7 @@ focus_neighbour_top = NodePath("../Level5")
 focus_neighbour_bottom = NodePath("../Level0")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
+custom_styles/focus = ExtResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 7 )
