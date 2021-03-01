@@ -9,11 +9,13 @@ var tutorial_invincible = false
 export var health_invincible = false
 
 const ACCEL = 2400
-const MAXVEL = 400
+const BASE_MAXVEL = 400
+var MAXVEL = 400
 
 const HEALTHBAR_MAX = 175
 
-const HEALTH_MAX = 7
+const BASE_HEALTH_MAX = 7
+var HEALTH_MAX = 7
 var health = HEALTH_MAX
 
 onready var healthbar = get_node("../../Layer/HealthbarHealth")
@@ -179,6 +181,11 @@ onready var LoseScreen = load("res://LoseScreen.tscn")
 onready var audio_bus = AudioServer.get_bus_index("GameMusic")
 
 func _ready():
+	HEALTH_MAX = BASE_HEALTH_MAX * Global.game_opts["health"]
+	health = HEALTH_MAX
+	
+	MAXVEL = BASE_MAXVEL * Global.game_opts["speed"]
+	
 	AudioServer.set_bus_volume_db(audio_bus, 0)
 	
 	if Global.level == 0:

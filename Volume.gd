@@ -16,7 +16,6 @@ func vol_to_slide(v):
 	
 func _ready():
 	self.value = vol_to_slide(AudioServer.get_bus_volume_db(bus))
-	print("v: ", self.value)
 	
 func _process(delta):
 	AudioServer.set_bus_volume_db(bus, slide_to_vol(self.value))

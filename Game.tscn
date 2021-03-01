@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://graphics/heart_indicator.svg" type="Texture" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://CrystalExplode.tscn" type="PackedScene" id=26]
 [ext_resource path="res://CauldronEnemy.tscn" type="PackedScene" id=27]
 [ext_resource path="res://ScrollEnemyII.tscn" type="PackedScene" id=28]
+[ext_resource path="res://PauseScreen.tscn" type="PackedScene" id=29]
 [ext_resource path="res://WritingBullet2.tscn" type="PackedScene" id=30]
 [ext_resource path="res://BookEnemy.tscn" type="PackedScene" id=31]
 [ext_resource path="res://WritingBullet.tscn" type="PackedScene" id=32]
@@ -207,6 +208,13 @@ scale = 0.5
 scale_random = 1.0
 
 [node name="Root" type="Node2D"]
+pause_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+layer = 5
+
+[node name="Node2D" parent="CanvasLayer" instance=ExtResource( 29 )]
 
 [node name="Layer" type="CanvasLayer" parent="."]
 
