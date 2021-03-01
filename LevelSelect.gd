@@ -2,6 +2,8 @@ extends Node2D
 
 var Game = preload("res://Game.tscn")
 
+onready var Menu = load("res://Menu.tscn")
+
 func _ready():
 	Music.set_menu_playing(true)
 	$FocusGrab.grab_focus()
@@ -16,3 +18,6 @@ func level_sel(button: Button):
 	
 	Music.set_menu_playing(false)
 	$Transition.transition_to(Game, self)
+
+func _menu_sel():
+	$Transition.transition_to(Menu, self)

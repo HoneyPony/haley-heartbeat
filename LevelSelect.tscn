@@ -67,7 +67,7 @@ margin_left = 295.251
 margin_top = 164.57
 margin_right = 485.251
 margin_bottom = 242.57
-focus_neighbour_top = NodePath("../Level5")
+focus_neighbour_top = NodePath("../Back")
 focus_neighbour_bottom = NodePath("../Level1")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -193,7 +193,7 @@ margin_top = 626.075
 margin_right = 490.652
 margin_bottom = 704.075
 focus_neighbour_top = NodePath("../Level4")
-focus_neighbour_bottom = NodePath("../Level0")
+focus_neighbour_bottom = NodePath("../Back")
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
@@ -208,6 +208,31 @@ text = "Level 5"
 flat = true
 align = 0
 script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+margin_left = 227.019
+margin_top = 862.366
+margin_right = 576.019
+margin_bottom = 940.366
+focus_neighbour_top = NodePath("../Level5")
+focus_neighbour_bottom = NodePath("../Level0")
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )
+custom_colors/font_color_pressed = Color( 0.634766, 0.109812, 0.404693, 1 )
+text = "Back to Menu"
+flat = true
+align = 0
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -234,3 +259,4 @@ __meta__ = {
 [connection signal="pressed" from="Level3" to="Level3" method="_on_pressed"]
 [connection signal="pressed" from="Level4" to="Level4" method="_on_pressed"]
 [connection signal="pressed" from="Level5" to="Level5" method="_on_pressed"]
+[connection signal="pressed" from="Back" to="." method="_menu_sel"]
