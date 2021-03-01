@@ -17,7 +17,7 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 3 )
-region_rect = Rect2( 0, -20, 32, 32 )
+region_rect = Rect2( 0, -24, 32, 72 )
 margin_left = 32.0
 margin_top = 800.0
 expand_margin_left = 40.0

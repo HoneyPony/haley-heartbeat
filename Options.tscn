@@ -13,34 +13,34 @@
 [ext_resource path="res://graphics/unchecked_box.svg" type="Texture" id=11]
 [ext_resource path="res://InvincibleBox.gd" type="Script" id=12]
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="DynamicFontData" id=7]
+[sub_resource type="DynamicFontData" id=5]
 font_path = "res://font/ptwht/playtime.ttf"
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=6]
 size = 64
 use_filter = true
-font_data = SubResource( 7 )
+font_data = SubResource( 5 )
 
-[sub_resource type="StyleBoxFlat" id=12]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 1, 1, 1, 1 )
 expand_margin_top = 3.0
 expand_margin_bottom = 3.0
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=8]
 size = 64
-font_data = SubResource( 7 )
+font_data = SubResource( 5 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
@@ -91,17 +91,17 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 129.877
-margin_top = 827.289
-margin_right = 654.877
-margin_bottom = 963.289
+margin_left = 207.0
+margin_top = 810.0
+margin_right = 574.0
+margin_bottom = 946.0
 focus_neighbour_top = NodePath("../CheckBox")
-custom_styles/hover = SubResource( 10 )
+custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = ExtResource( 1 )
-custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )
@@ -139,7 +139,7 @@ focus_neighbour_bottom = NodePath("../Music")
 custom_icons/grabber_disabled = ExtResource( 8 )
 custom_icons/grabber_highlight = ExtResource( 8 )
 custom_icons/grabber = ExtResource( 8 )
-custom_styles/slider = SubResource( 12 )
+custom_styles/slider = SubResource( 7 )
 value = 50.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -156,7 +156,7 @@ focus_neighbour_bottom = NodePath("../SFX")
 custom_icons/grabber_disabled = ExtResource( 8 )
 custom_icons/grabber_highlight = ExtResource( 8 )
 custom_icons/grabber = ExtResource( 8 )
-custom_styles/slider = SubResource( 12 )
+custom_styles/slider = SubResource( 7 )
 value = 50.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -174,7 +174,7 @@ focus_neighbour_bottom = NodePath("../CheckBox")
 custom_icons/grabber_disabled = ExtResource( 8 )
 custom_icons/grabber_highlight = ExtResource( 8 )
 custom_icons/grabber = ExtResource( 8 )
-custom_styles/slider = SubResource( 12 )
+custom_styles/slider = SubResource( 7 )
 value = 50.0
 script = ExtResource( 9 )
 __meta__ = {
@@ -187,7 +187,7 @@ margin_left = 177.255
 margin_top = 270.72
 margin_right = 378.255
 margin_bottom = 348.72
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Master"
 script = ExtResource( 4 )
@@ -200,7 +200,7 @@ margin_left = 187.819
 margin_top = 589.169
 margin_right = 461.819
 margin_bottom = 667.169
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Invincibility"
 script = ExtResource( 4 )
@@ -213,7 +213,7 @@ margin_left = 177.255
 margin_top = 348.72
 margin_right = 378.255
 margin_bottom = 426.72
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Music"
 script = ExtResource( 4 )
@@ -226,7 +226,7 @@ margin_left = 177.255
 margin_top = 427.469
 margin_right = 378.255
 margin_bottom = 505.469
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "SFX"
 script = ExtResource( 4 )
