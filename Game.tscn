@@ -298,14 +298,14 @@ margin_top = 872.0
 margin_right = 768.0
 margin_bottom = 950.0
 custom_fonts/font = SubResource( 5 )
-text = "Use WASD or   L   to move"
+text = "Use arrow keys or   L   to move"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="JoystickIndicator" type="Sprite" parent="Tutorial/Label1"]
-position = Vector2( 441.85, 29.21 )
+position = Vector2( 478.009, 30.051 )
 scale = Vector2( 0.268771, 0.268771 )
 texture = ExtResource( 13 )
 
@@ -516,6 +516,7 @@ script = ExtResource( 18 )
 [node name="Transition" parent="." instance=ExtResource( 23 )]
 
 [node name="LagHelper" type="Node2D" parent="."]
+position = Vector2( 264.903, 751.536 )
 script = ExtResource( 24 )
 
 [node name="BasicArrow" parent="LagHelper" instance=ExtResource( 44 )]
