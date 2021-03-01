@@ -1,0 +1,26 @@
+Important: You can also play with arrow keys!
+
+(It's hard to shoot if you use WASD)
+Haley Heartbeat
+
+Play as Haley Heartbeat, a young magician walking back to her home, hindered only by EVIL enchanted beings...
+
+Haley Heartbeat is a shoot-em-up game with an added component of rhythm: shoot right as your heart beats to get more powerful shots, and chain good rhythm together for the most powerful projectiles.
+Please Download If Possible
+
+Whenever the web version has to load a new kind of special effect (e.g. a bullet), it lag spikes. I tried fixing this but apparently my fix didn't work. I recommend downloading for the best experience. (Unfortunately I was only able to upload the Windows version on time).
+
+My other recommendation is to play with a controller! It's fun! :D
+Known Bugs
+
+- You definitely want to return to the main menu after beating the fourth level (the one with the red things). The end-of-level screen refuses to load the fifth level, and will instead replay the fourth level. You can however play the fifth level from the level select if you like.
+
+- The death animation seems to reset every time you get hurt, which might lead to a softlock on screens with enough enemies.
+
+- The win screen and lose screen music repeats; it is meant to only play once.
+Source Code
+
+This game is open source!
+Credits
+
+All code and art assets were made by me during the jam. Most of the sound effects are based on public-domain samples from freesound, as well as a couple generated ones.
