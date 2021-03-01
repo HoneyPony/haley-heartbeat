@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://WinScreen.gd" type="Script" id=1]
 [ext_resource path="res://graphics/haley_hat.png" type="Texture" id=2]
@@ -6,30 +6,20 @@
 [ext_resource path="res://TextHover.gd" type="Script" id=4]
 [ext_resource path="res://ScreenTransition.tscn" type="PackedScene" id=5]
 [ext_resource path="res://font/font1.tres" type="DynamicFont" id=6]
-[ext_resource path="res://graphics/button_focus_small.svg" type="Texture" id=7]
+[ext_resource path="res://StyleHeartSmall.tres" type="StyleBox" id=7]
 [ext_resource path="res://DeleteSelf.gd" type="Script" id=8]
 [ext_resource path="res://lmms/success.ogg" type="AudioStream" id=9]
 
-[sub_resource type="DynamicFontData" id=7]
+[sub_resource type="DynamicFontData" id=1]
 font_path = "res://font/ptwht/playtime.ttf"
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=2]
 size = 64
 use_filter = true
-font_data = SubResource( 7 )
+font_data = SubResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 7 )
-region_rect = Rect2( 0, -20, 32, 32 )
-margin_left = 32.0
-margin_top = 800.0
-expand_margin_left = 40.0
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -37,12 +27,15 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="DynamicFontData" id=6]
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFontData" id=7]
 font_path = "res://font/ptwht/playtime.ttf"
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=8]
 size = 64
-font_data = SubResource( 6 )
+font_data = SubResource( 7 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -76,7 +69,7 @@ margin_left = -7.9303
 margin_top = 126.706
 margin_right = 760.07
 margin_bottom = 301.706
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "You beat the final level!
 
@@ -96,12 +89,12 @@ margin_left = 223.556
 margin_top = 831.968
 margin_right = 558.556
 margin_bottom = 909.968
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )

@@ -15,30 +15,13 @@
 [ext_resource path="res://graphics/tick_highlighted.svg" type="Texture" id=13]
 [ext_resource path="res://GameplayOpt.gd" type="Script" id=14]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="DynamicFontData" id=5]
-font_path = "res://font/ptwht/playtime.ttf"
-
-[sub_resource type="DynamicFont" id=6]
-size = 64
-use_filter = true
-font_data = SubResource( 5 )
-
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 1, 1, 1, 1 )
 expand_margin_top = 3.0
 expand_margin_bottom = 3.0
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://font/ptwht/playtime.ttf"
 
 [sub_resource type="DynamicFont" id=8]
 size = 48
@@ -46,10 +29,6 @@ font_data = SubResource( 5 )
 
 [sub_resource type="DynamicFont" id=11]
 size = 54
-font_data = SubResource( 5 )
-
-[sub_resource type="DynamicFont" id=10]
-size = 48
 font_data = SubResource( 5 )
 
 [sub_resource type="StyleBoxFlat" id=9]
@@ -63,6 +42,31 @@ corner_radius_top_left = 32
 corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="DynamicFont" id=10]
+size = 48
+font_data = SubResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 64
+use_filter = true
+font_data = SubResource( 5 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
@@ -109,29 +113,6 @@ custom_fonts/font = ExtResource( 7 )
 text = "Play"
 __meta__ = {
 "_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="."]
-margin_left = 207.0
-margin_top = 831.863
-margin_right = 574.0
-margin_bottom = 967.863
-focus_neighbour_top = NodePath("../CheckBox")
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = ExtResource( 1 )
-custom_styles/disabled = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = SubResource( 6 )
-custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )
-custom_colors/font_color_pressed = Color( 0.634766, 0.109812, 0.404693, 1 )
-text = "Back to Menu"
-flat = true
-script = ExtResource( 4 )
-__meta__ = {
 "_edit_use_anchors_": false
 }
 
@@ -261,6 +242,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 459.03
+margin_top = 560.67
+margin_right = 723.03
+margin_bottom = 824.67
+rect_scale = Vector2( 0.2, 0.2 )
+focus_neighbour_top = NodePath("../SFX")
+focus_neighbour_bottom = NodePath("../SpeedSl")
+custom_icons/checked = ExtResource( 10 )
+custom_icons/unchecked = ExtResource( 11 )
+custom_styles/focus = SubResource( 9 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Label5" type="Label" parent="."]
 margin_left = 178.669
 margin_top = 295.627
@@ -292,8 +289,8 @@ margin_left = 344.664
 margin_top = 647.081
 margin_right = 588.664
 margin_bottom = 679.081
-focus_neighbour_top = NodePath("../Music")
-focus_neighbour_bottom = NodePath("../CheckBox")
+focus_neighbour_top = NodePath("../CheckBox")
+focus_neighbour_bottom = NodePath("../DamageSl")
 custom_icons/grabber_disabled = ExtResource( 8 )
 custom_icons/grabber_highlight = ExtResource( 13 )
 custom_icons/grabber = ExtResource( 8 )
@@ -332,13 +329,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SpeedSl2" type="HSlider" parent="."]
+[node name="DamageSl" type="HSlider" parent="."]
 margin_left = 345.332
 margin_top = 713.837
 margin_right = 589.332
 margin_bottom = 745.837
-focus_neighbour_top = NodePath("../Music")
-focus_neighbour_bottom = NodePath("../CheckBox")
+focus_neighbour_top = NodePath("../SpeedSl")
+focus_neighbour_bottom = NodePath("../HealthSl")
 custom_icons/grabber_disabled = ExtResource( 8 )
 custom_icons/grabber_highlight = ExtResource( 13 )
 custom_icons/grabber = ExtResource( 8 )
@@ -378,13 +375,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SpeedSl3" type="HSlider" parent="."]
+[node name="HealthSl" type="HSlider" parent="."]
 margin_left = 345.332
 margin_top = 781.048
 margin_right = 589.332
 margin_bottom = 813.048
-focus_neighbour_top = NodePath("../Music")
-focus_neighbour_bottom = NodePath("../CheckBox")
+focus_neighbour_top = NodePath("../DamageSl")
+focus_neighbour_bottom = NodePath("../Button")
 custom_icons/grabber_disabled = ExtResource( 8 )
 custom_icons/grabber_highlight = ExtResource( 13 )
 custom_icons/grabber = ExtResource( 8 )
@@ -424,22 +421,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox" type="CheckBox" parent="."]
-margin_left = 459.03
-margin_top = 560.67
-margin_right = 723.03
-margin_bottom = 824.67
-rect_scale = Vector2( 0.2, 0.2 )
-focus_neighbour_top = NodePath("../SFX")
-focus_neighbour_bottom = NodePath("../Button")
-custom_icons/checked = ExtResource( 10 )
-custom_icons/unchecked = ExtResource( 11 )
-custom_styles/focus = SubResource( 9 )
-script = ExtResource( 12 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 234.646
 margin_top = 203.747
@@ -454,6 +435,29 @@ margin_left = 206.0
 margin_top = 531.0
 margin_right = 575.0
 margin_bottom = 536.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 207.0
+margin_top = 831.863
+margin_right = 574.0
+margin_bottom = 967.863
+focus_neighbour_top = NodePath("../HealthSl")
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = ExtResource( 1 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_disabled = Color( 0.227451, 0.227451, 0.227451, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.811765, 0.176471, 0.533333, 1 )
+custom_colors/font_color_pressed = Color( 0.634766, 0.109812, 0.404693, 1 )
+text = "Back to Menu"
+flat = true
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

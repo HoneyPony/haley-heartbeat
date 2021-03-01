@@ -38,6 +38,8 @@ func hit_something(what):
 	return true
 	
 func _ready():
+	damage *= Global.game_opts["damage"]
+	
 	if beat:
 		$Shoot/Beat.play()
 	else:

@@ -78,13 +78,13 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 1e-05, 1e-05 )
 frames = SubResource( 2 )
-frame = 8
+frame = 28
 playing = true
 
 [node name="Particles2D" type="CPUParticles2D" parent="."]
 z_index = -1
 amount = 5
-lifetime = 0.7
+lifetime = 0.3
 local_coords = false
 texture = ExtResource( 43 )
 spread = 180.0

@@ -8,7 +8,7 @@ var home_x = 0
 
 var spawn_y = 0
 
-var target_x_vel
+var target_x_vel = 0
 
 var health: float = 10
 
