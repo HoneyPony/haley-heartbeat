@@ -166,7 +166,7 @@ frames = SubResource( 1 )
 [node name="SpawnIdle" type="AnimatedSprite" parent="."]
 position = Vector2( -0.280624, -112 )
 frames = SubResource( 7 )
-frame = 6
+frame = 7
 playing = true
 
 [node name="Hit" type="AnimatedSprite" parent="."]
@@ -191,11 +191,12 @@ anims/MatchJump = SubResource( 6 )
 
 [node name="Shoot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 92 )
-volume_db = -10.0
+volume_db = -12.0
 bus = "SFX"
 
 [node name="HitS" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 93 )
 volume_db = -5.666
 bus = "SFX"
+
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hit"]

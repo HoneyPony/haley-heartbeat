@@ -230,14 +230,15 @@ shape = SubResource( 5 )
 
 [node name="Shoot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 147 )
-volume_db = -11.0
+volume_db = -30.0
 bus = "SFX"
 
 [node name="HitS" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 146 )
-volume_db = -10.0
+volume_db = -14.0
 bus = "SFX"
 
 [node name="BSpawn" type="Position2D" parent="."]
 position = Vector2( -0.176773, -56.7453 )
+
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hit"]
