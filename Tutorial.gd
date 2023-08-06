@@ -22,7 +22,7 @@ var f_cond_shoot = false
 
 # How long a label should be shown before the next label is shown
 var allow_transition_timer = 0
-const TRANSITION_TIME = 3.2
+const TRANSITION_TIME = 4.0
 
 # Timer used to animate labels
 var fade_timer = 0

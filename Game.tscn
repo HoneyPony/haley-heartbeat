@@ -401,13 +401,13 @@ texture = ExtResource( 21 )
 
 [node name="Label7" type="Label" parent="Tutorial"]
 visible = false
-margin_left = -91.5756
+margin_left = -36.0
 margin_top = 116.432
-margin_right = 675.424
+margin_right = 731.0
 margin_bottom = 356.432
 custom_fonts/font = SubResource( 5 )
-text = "Consecutive shots are
-more powerful
+text = "Any on-beat hit will cycle
+through more powerful bullets
 "
 align = 1
 __meta__ = {
