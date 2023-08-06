@@ -5,7 +5,7 @@ export (NodePath) var label
 
 func slide_to_val(s):
 	var expo = ((s - 50) / 50) * 2
-	return pow(2, expo)
+	return round(pow(2, expo) / 0.05) * 0.05
 	
 func val_to_slide(v):
 	var l = log(v) / log(2)
