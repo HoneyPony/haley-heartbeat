@@ -132,15 +132,15 @@ func shoot_process(delta):
 				
 			play_heart()
 			try_shoot(false, true)
-		else:
-			heartbeats = 0
+		#else:
+			#heartbeats = 0
 		
 	if Input.is_action_pressed("player_fire"):
 		if try_shoot(false, false):
 			anim_shoot = true
-	else:
-		if shoot_timer < -0.5:
-			heartbeats = 0
+	#else:
+		#if shoot_timer < -0.5:
+			#heartbeats = 0
 			
 #	reset_time = clamp(reset_time - delta, 0.0, 1.0)
 #	if reset_time <= 0:
