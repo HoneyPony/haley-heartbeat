@@ -54,7 +54,14 @@ var BasicArrowIV = preload("res://BasicArrowIV.tscn")
 	
 var shoot_timer = 0
 
-func beats2arrow():
+func beats2arrow(on_beat = true):
+	# Forgiving mechanics:
+	# Your bullet level isn't reset if you shoot not-on-beat.
+	# However, when you do shoot not-on-beat, your arrow is
+	# reset to the default for that shot.
+	if not on_beat:
+		return BasicArrow
+	
 	if heartbeats == 4:
 		return BasicArrowIV
 	if heartbeats == 3:
@@ -63,9 +70,13 @@ func beats2arrow():
 		return BasicArrowII
 	return BasicArrow
 
-func beats2damage():
-	if heartbeats == 0:
+func beats2damage(on_beat = true):
+	if not on_beat:
 		return 1
+	
+	if heartbeats == 0:
+		return 1.1 # Slightly better than off-beat for when
+		# the first arrow is on-beat
 	if heartbeats == 1:
 		return 1.2
 	if heartbeats == 2:
@@ -85,9 +96,9 @@ func try_shoot(reset_heartbeats = false, on_beat = false):
 		
 		shoot_timer = 0.27
 		
-		var arrow = beats2arrow().instance()
+		var arrow = beats2arrow(on_beat).instance()
 		arrow.beat = on_beat
-		arrow.damage = beats2damage()
+		arrow.damage = beats2damage(on_beat)
 		arrow.position = $ShootSpawn.global_position
 		get_parent().add_child(arrow)
 		
@@ -125,7 +136,7 @@ func shoot_process(delta):
 			heartbeats = 0
 		
 	if Input.is_action_pressed("player_fire"):
-		if try_shoot(true):
+		if try_shoot(false, false):
 			anim_shoot = true
 	else:
 		if shoot_timer < -0.5:
