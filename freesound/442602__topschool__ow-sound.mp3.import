@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/442602__topschool__ow-sound.mp3-6790c408a17d52605dd35477022e33a4.mp3str"
+
+[deps]
+
+source_file="res://freesound/442602__topschool__ow-sound.mp3"
+dest_files=[ "res://.import/442602__topschool__ow-sound.mp3-6790c408a17d52605dd35477022e33a4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

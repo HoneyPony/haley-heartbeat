@@ -41,7 +41,7 @@ var home_position
 func _physics_process(delta):
 	#offset.y -= delta * 300
 	
-	if home_node != null:
+	if is_instance_valid(home_node):
 		home_position = home_node.global_position
 		
 	position = polar2cartesian(radius, theta * TAU) + home_position

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/knock-pot.mp3-8906301cd56b2f972bb649aacea9286e.mp3str"
+
+[deps]
+
+source_file="res://freesound/knock-pot.mp3"
+dest_files=[ "res://.import/knock-pot.mp3-8906301cd56b2f972bb649aacea9286e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
