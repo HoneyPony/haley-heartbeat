@@ -166,7 +166,7 @@ frames = SubResource( 1 )
 [node name="SpawnIdle" type="AnimatedSprite" parent="."]
 position = Vector2( -0.280624, -112 )
 frames = SubResource( 7 )
-frame = 7
+frame = 9
 playing = true
 
 [node name="Hit" type="AnimatedSprite" parent="."]
